@@ -10,7 +10,6 @@ Official source code, custom CUDA kernels, baseline harnesses, verification suit
 > Zaiying Ma, Yi Yue, Wencong Yang, and Feng Zhang\*  
 > *(SIGMOD 2027 Industrial Track)*
 
-Repository: <https://github.com/mazaiying/prism>
 
 ---
 
