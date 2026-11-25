@@ -1,0 +1,106 @@
+{
+  "sift1m": [
+    {
+      "rho_corr": 0.0,
+      "prism_qps": 64744.85484209842,
+      "prism_recall": 0.9460937500000001,
+      "uncompacted_qps": 87214.4305141147,
+      "uncompacted_active_lane_pct": 4.191615689332175,
+      "compacted_active_lane_pct": 88.90226137624862,
+      "cuvs_ivf_qps": 893.9739328381359,
+      "cuvs_ivf_recall": 0.9765625000000001
+    },
+    {
+      "rho_corr": 0.25,
+      "prism_qps": 68892.88011525008,
+      "prism_recall": 0.9625000000000001,
+      "uncompacted_qps": 82516.2815229125,
+      "uncompacted_active_lane_pct": 4.259966684285554,
+      "compacted_active_lane_pct": 91.48250064493938,
+      "cuvs_ivf_qps": 920.6262939757639,
+      "cuvs_ivf_recall": 0.9707031250000001
+    },
+    {
+      "rho_corr": 0.5,
+      "prism_qps": 69259.21378905814,
+      "prism_recall": 0.9339843750000001,
+      "uncompacted_qps": 95560.77964395273,
+      "uncompacted_active_lane_pct": 4.468808617223214,
+      "compacted_active_lane_pct": 88.89788850407776,
+      "cuvs_ivf_qps": 926.0757220366328,
+      "cuvs_ivf_recall": 0.9625
+    },
+    {
+      "rho_corr": 0.75,
+      "prism_qps": 70859.35850344555,
+      "prism_recall": 0.9609375,
+      "uncompacted_qps": 86249.95197477748,
+      "uncompacted_active_lane_pct": 4.955505005944854,
+      "compacted_active_lane_pct": 90.68462916594716,
+      "cuvs_ivf_qps": 934.4240079396187,
+      "cuvs_ivf_recall": 0.981640625
+    },
+    {
+      "rho_corr": 0.9,
+      "prism_qps": 33515.31988353435,
+      "prism_recall": 0.915234375,
+      "uncompacted_qps": 47169.97019318419,
+      "uncompacted_active_lane_pct": 5.525739049284649,
+      "compacted_active_lane_pct": 96.18280945224315,
+      "cuvs_ivf_qps": 921.9201071796631,
+      "cuvs_ivf_recall": 0.797265625
+    }
+  ],
+  "gist1m": [
+    {
+      "rho_corr": 0.0,
+      "prism_qps": 13676.519342312034,
+      "prism_recall": 0.921484375,
+      "uncompacted_qps": 10614.625269518849,
+      "uncompacted_active_lane_pct": 4.196964625222527,
+      "compacted_active_lane_pct": 94.48995884189611,
+      "cuvs_ivf_qps": 740.1622031289604,
+      "cuvs_ivf_recall": 0.9671875000000001
+    },
+    {
+      "rho_corr": 0.25,
+      "prism_qps": 11279.643016933545,
+      "prism_recall": 0.923046875,
+      "uncompacted_qps": 10632.663248055795,
+      "uncompacted_active_lane_pct": 4.240555864755809,
+      "compacted_active_lane_pct": 94.31848553905019,
+      "cuvs_ivf_qps": 753.5544859625448,
+      "cuvs_ivf_recall": 0.8828125
+    },
+    {
+      "rho_corr": 0.5,
+      "prism_qps": 8011.793554374401,
+      "prism_recall": 0.9273437500000001,
+      "uncompacted_qps": 9992.602442186204,
+      "uncompacted_active_lane_pct": 4.359108061949006,
+      "compacted_active_lane_pct": 94.28809450623149,
+      "cuvs_ivf_qps": 718.6536512814318,
+      "cuvs_ivf_recall": 0.966796875
+    },
+    {
+      "rho_corr": 0.75,
+      "prism_qps": 8633.565393913817,
+      "prism_recall": 0.95703125,
+      "uncompacted_qps": 8524.643283511177,
+      "uncompacted_active_lane_pct": 4.706507145137363,
+      "compacted_active_lane_pct": 96.2095984799048,
+      "cuvs_ivf_qps": 721.0198187005363,
+      "cuvs_ivf_recall": 0.947265625
+    },
+    {
+      "rho_corr": 0.9,
+      "prism_qps": 8309.486312882837,
+      "prism_recall": 0.951953125,
+      "uncompacted_qps": 5169.259696196864,
+      "uncompacted_active_lane_pct": 5.328469001722004,
+      "compacted_active_lane_pct": 97.92695265074869,
+      "cuvs_ivf_qps": 668.8164666826618,
+      "cuvs_ivf_recall": 0.9453125
+    }
+  ]
+}

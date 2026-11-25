@@ -1,0 +1,17 @@
+# Core runtime & tensor/array dependencies
+numpy>=1.24.0
+scipy>=1.10.0
+torch>=2.1.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+pyarrow>=14.0.0
+ninja>=1.11.0
+pytest>=7.4.0
+
+# Optional CPU / GPU ANNS baselines & real-data encoders
+hnswlib>=0.8.0
+faiss-gpu-cu12>=1.8.0; platform_system == "Linux"
+duckdb>=0.10.0
+transformers>=4.36.0
+datasets>=2.16.0
+psutil>=5.9.0

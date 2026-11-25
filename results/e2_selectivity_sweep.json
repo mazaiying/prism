@@ -1,0 +1,1418 @@
+{
+  "sift1m": [
+    {
+      "target_sel": 0.0005,
+      "empirical_sel": 0.000498953125,
+      "methods": {
+        "PRISM": {
+          "qps": 32893.7652226966,
+          "recall": 1.0,
+          "param": 8
+        },
+        "PRISM_Regime1": {
+          "qps": 39323.26507050431,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 239516.62978853923,
+          "recall": 0.29609375
+        },
+        "PRISM_Regime3": {
+          "qps": 215057.2856300874,
+          "recall": 0.29609375
+        },
+        "B7_HostOffload": {
+          "qps": 252788.877754017,
+          "recall": 0.29609375
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 480.2453290725291,
+          "recall": 0.977734375
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 385.61201306236603,
+          "recall": 0.73203125
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 130.54802455949235,
+          "recall": 0.95625
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 3413.5688774727078,
+          "recall": 0.101953125
+        },
+        "B5_ACORN_48T": {
+          "qps": 3023.2019200000655,
+          "recall": 0.133984375
+        }
+      }
+    },
+    {
+      "target_sel": 0.002,
+      "empirical_sel": 0.002001053125,
+      "methods": {
+        "PRISM": {
+          "qps": 36842.62948577978,
+          "recall": 0.986328125,
+          "param": 160
+        },
+        "PRISM_Regime1": {
+          "qps": 42624.90669176433,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 101514.82095566276,
+          "recall": 0.95234375
+        },
+        "PRISM_Regime3": {
+          "qps": 64819.727472096274,
+          "recall": 0.95234375
+        },
+        "B7_HostOffload": {
+          "qps": 57025.48801144501,
+          "recall": 0.95234375
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1291.869614747774,
+          "recall": 0.98125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 401.45758606961476,
+          "recall": 0.843359375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 77.0912898492309,
+          "recall": 0.978515625
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 11826.052575051348,
+          "recall": 0.34453124999999996
+        },
+        "B5_ACORN_48T": {
+          "qps": 459.05797546235834,
+          "recall": 0.63515625
+        }
+      }
+    },
+    {
+      "target_sel": 0.005,
+      "empirical_sel": 0.004984881250000001,
+      "methods": {
+        "PRISM": {
+          "qps": 44717.448732993806,
+          "recall": 0.97265625,
+          "param": 128
+        },
+        "PRISM_Regime1": {
+          "qps": 34470.61885866203,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 101378.14059390458,
+          "recall": 0.96875
+        },
+        "PRISM_Regime3": {
+          "qps": 67115.11234704794,
+          "recall": 0.96875
+        },
+        "B7_HostOffload": {
+          "qps": 32727.643513619318,
+          "recall": 0.96875
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1310.0156287274585,
+          "recall": 0.9664062500000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 418.11533489032996,
+          "recall": 0.8910156250000001
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 55.96015874760602,
+          "recall": 0.986328125
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 6973.8913195196055,
+          "recall": 0.5746093750000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 462.6233092213408,
+          "recall": 0.77734375
+        }
+      }
+    },
+    {
+      "target_sel": 0.01,
+      "empirical_sel": 0.00996909375,
+      "methods": {
+        "PRISM": {
+          "qps": 43315.128110257254,
+          "recall": 0.9644531250000001,
+          "param": 96
+        },
+        "PRISM_Regime1": {
+          "qps": 29452.344541910123,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 96869.31104983902,
+          "recall": 0.9632812500000001
+        },
+        "PRISM_Regime3": {
+          "qps": 66197.65500278394,
+          "recall": 0.9632812500000001
+        },
+        "B7_HostOffload": {
+          "qps": 21821.84010744184,
+          "recall": 0.9632812500000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1302.6241493040045,
+          "recall": 0.9828125000000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 422.4682303879511,
+          "recall": 0.933203125
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 42.48398828049735,
+          "recall": 0.9886718750000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 7001.099048069452,
+          "recall": 0.7664062500000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 434.3855159595478,
+          "recall": 0.8871093750000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.02,
+      "empirical_sel": 0.019995671875,
+      "methods": {
+        "PRISM": {
+          "qps": 61877.31804085123,
+          "recall": 0.9734375000000001,
+          "param": 80
+        },
+        "PRISM_Regime1": {
+          "qps": 24589.903368911597,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 90473.06071606619,
+          "recall": 0.9734375000000001
+        },
+        "PRISM_Regime3": {
+          "qps": 67671.36015283287,
+          "recall": 0.9734375000000001
+        },
+        "B7_HostOffload": {
+          "qps": 13732.630927804288,
+          "recall": 0.9734375000000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1259.410802674751,
+          "recall": 0.9945312500000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 416.25122369221157,
+          "recall": 0.981640625
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 33.08568245168607,
+          "recall": 0.99140625
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 7736.029699735744,
+          "recall": 0.8179687500000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 414.44352514539946,
+          "recall": 0.9671875000000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.05,
+      "empirical_sel": 0.04990493125,
+      "methods": {
+        "PRISM": {
+          "qps": 57136.074635314086,
+          "recall": 0.9765625,
+          "param": 64
+        },
+        "PRISM_Regime1": {
+          "qps": 19731.243997410496,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 78122.6288328354,
+          "recall": 0.9765625
+        },
+        "PRISM_Regime3": {
+          "qps": 62645.60906362698,
+          "recall": 0.9765625
+        },
+        "B7_HostOffload": {
+          "qps": 6911.720941366394,
+          "recall": 0.9765625
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1265.6547397240038,
+          "recall": 0.9765625
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 428.32632256949984,
+          "recall": 0.987109375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 21.23772093616033,
+          "recall": 0.9875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 4811.021856081442,
+          "recall": 0.865234375
+        },
+        "B5_ACORN_48T": {
+          "qps": 397.93792503676076,
+          "recall": 0.9730468750000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.1,
+      "empirical_sel": 0.09983271875,
+      "methods": {
+        "PRISM": {
+          "qps": 52489.18947886209,
+          "recall": 0.967578125,
+          "param": 48
+        },
+        "PRISM_Regime1": {
+          "qps": 14889.372492815983,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 72001.27065188957,
+          "recall": 0.967578125
+        },
+        "PRISM_Regime3": {
+          "qps": 66080.23225955344,
+          "recall": 0.967578125
+        },
+        "B7_HostOffload": {
+          "qps": 4784.263713891425,
+          "recall": 0.967578125
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1246.6513991101758,
+          "recall": 0.982421875
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 426.8089394281043,
+          "recall": 0.99375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 12.089323258656847,
+          "recall": 0.985546875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 9897.123106199446,
+          "recall": 0.913671875
+        },
+        "B5_ACORN_48T": {
+          "qps": 408.933465151773,
+          "recall": 0.939453125
+        }
+      }
+    },
+    {
+      "target_sel": 0.2,
+      "empirical_sel": 0.19964294375,
+      "methods": {
+        "PRISM": {
+          "qps": 45623.143548817134,
+          "recall": 0.975,
+          "param": 48
+        },
+        "PRISM_Regime1": {
+          "qps": 12552.382986496223,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 58647.89352948021,
+          "recall": 0.975
+        },
+        "PRISM_Regime3": {
+          "qps": 57758.3477804079,
+          "recall": 0.975
+        },
+        "B7_HostOffload": {
+          "qps": 2517.743660088535,
+          "recall": 0.975
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1228.9336082757409,
+          "recall": 0.991015625
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 437.8523582845783,
+          "recall": 0.9863281250000001
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 10.85634100815398,
+          "recall": 0.9859374999999999
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 10268.950330448431,
+          "recall": 0.9671875000000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 489.2809727063344,
+          "recall": 0.87890625
+        }
+      }
+    },
+    {
+      "target_sel": 0.4,
+      "empirical_sel": 0.398983034375,
+      "methods": {
+        "PRISM": {
+          "qps": 40011.39607764226,
+          "recall": 0.96015625,
+          "param": 32
+        },
+        "PRISM_Regime1": {
+          "qps": 10736.861824504407,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 50300.517186750876,
+          "recall": 0.96015625
+        },
+        "PRISM_Regime3": {
+          "qps": 59456.40643850645,
+          "recall": 0.96015625
+        },
+        "B7_HostOffload": {
+          "qps": 1785.5333782699454,
+          "recall": 0.96015625
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1251.5217916547472,
+          "recall": 0.9937500000000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 440.631744390041,
+          "recall": 0.987890625
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 7.239477146213765,
+          "recall": 0.9847656250000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 36117.922728500685,
+          "recall": 0.9613281250000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 705.9141928673135,
+          "recall": 0.7476562499999999
+        }
+      }
+    },
+    {
+      "target_sel": 0.8,
+      "empirical_sel": 0.79957081875,
+      "methods": {
+        "PRISM": {
+          "qps": 39298.91209809522,
+          "recall": 0.9703125,
+          "param": 32
+        },
+        "PRISM_Regime1": {
+          "qps": 8115.863981870968,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 42025.22311453795,
+          "recall": 0.9703125
+        },
+        "PRISM_Regime3": {
+          "qps": 47710.18531067746,
+          "recall": 0.9703125
+        },
+        "B7_HostOffload": {
+          "qps": 888.6292521649448,
+          "recall": 0.9703125
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1253.4715468182849,
+          "recall": 0.9750000000000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 441.2471787404566,
+          "recall": 0.9890625000000001
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 5.974527361339724,
+          "recall": 0.9875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 36443.737026100534,
+          "recall": 0.96875
+        },
+        "B5_ACORN_48T": {
+          "qps": 1421.1473772555087,
+          "recall": 0.5335937500000001
+        }
+      }
+    }
+  ],
+  "gist1m": [
+    {
+      "target_sel": 0.0005,
+      "empirical_sel": 0.0005021656249999999,
+      "methods": {
+        "PRISM": {
+          "qps": 5877.454611712481,
+          "recall": 0.9984375,
+          "param": 8
+        },
+        "PRISM_Regime1": {
+          "qps": 6201.056786754302,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 97502.60250502627,
+          "recall": 0.2953125
+        },
+        "PRISM_Regime3": {
+          "qps": 59890.8993691014,
+          "recall": 0.2953125
+        },
+        "B7_HostOffload": {
+          "qps": 98901.2314813038,
+          "recall": 0.2953125
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 440.6237478627416,
+          "recall": 0.9976562499999999
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 168.32421081014138,
+          "recall": 0.871875
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 64.96405080335227,
+          "recall": 0.923828125
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 2964.9378644475487,
+          "recall": 0.09726562500000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 4106.8846422779825,
+          "recall": 0.137109375
+        }
+      }
+    },
+    {
+      "target_sel": 0.002,
+      "empirical_sel": 0.002018225,
+      "methods": {
+        "PRISM": {
+          "qps": 9142.212446094194,
+          "recall": 0.96015625,
+          "param": 96
+        },
+        "PRISM_Regime1": {
+          "qps": 8367.695570721286,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 23688.227439049402,
+          "recall": 0.8933593750000001
+        },
+        "PRISM_Regime3": {
+          "qps": 13144.969355780013,
+          "recall": 0.8933593750000001
+        },
+        "B7_HostOffload": {
+          "qps": 9039.807386441817,
+          "recall": 0.8933593750000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1121.7002831890386,
+          "recall": 0.98046875
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 185.12638257352222,
+          "recall": 0.949609375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 43.17523761743951,
+          "recall": 0.962890625
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 437.50668678864713,
+          "recall": 0.39921874999999996
+        },
+        "B5_ACORN_48T": {
+          "qps": 443.4179163779711,
+          "recall": 0.68671875
+        }
+      }
+    },
+    {
+      "target_sel": 0.005,
+      "empirical_sel": 0.0050206750000000005,
+      "methods": {
+        "PRISM": {
+          "qps": 9542.795352112249,
+          "recall": 0.97265625,
+          "param": 128
+        },
+        "PRISM_Regime1": {
+          "qps": 6414.815717426336,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 17705.57728282247,
+          "recall": 0.9597656250000001
+        },
+        "PRISM_Regime3": {
+          "qps": 8557.673233618412,
+          "recall": 0.9597656250000001
+        },
+        "B7_HostOffload": {
+          "qps": 3043.2652129581497,
+          "recall": 0.9597656250000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1075.9431027184962,
+          "recall": 0.98828125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 303.95608731723485,
+          "recall": 0.9566406250000001
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 33.06239304334241,
+          "recall": 0.9687500000000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 437.2406412086116,
+          "recall": 0.7144531249999999
+        },
+        "B5_ACORN_48T": {
+          "qps": 424.2246678188658,
+          "recall": 0.7878906250000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.01,
+      "empirical_sel": 0.0100257375,
+      "methods": {
+        "PRISM": {
+          "qps": 9723.547304979204,
+          "recall": 0.971875,
+          "param": 128
+        },
+        "PRISM_Regime1": {
+          "qps": 5003.910614271841,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 14547.168665035908,
+          "recall": 0.970703125
+        },
+        "PRISM_Regime3": {
+          "qps": 6840.008481993614,
+          "recall": 0.970703125
+        },
+        "B7_HostOffload": {
+          "qps": 1475.0753773335728,
+          "recall": 0.970703125
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 1015.0503192920335,
+          "recall": 0.94453125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 349.55582547467804,
+          "recall": 0.9781249999999999
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 35.27966317029297,
+          "recall": 0.967578125
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 437.03306155482653,
+          "recall": 0.892578125
+        },
+        "B5_ACORN_48T": {
+          "qps": 373.54202662457374,
+          "recall": 0.8296875000000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.02,
+      "empirical_sel": 0.020035184375,
+      "methods": {
+        "PRISM": {
+          "qps": 12228.171433151181,
+          "recall": 0.9515625000000001,
+          "param": 80
+        },
+        "PRISM_Regime1": {
+          "qps": 3931.356989021389,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 12895.976307654199,
+          "recall": 0.9515625000000001
+        },
+        "PRISM_Regime3": {
+          "qps": 7719.237707040942,
+          "recall": 0.9515625000000001
+        },
+        "B7_HostOffload": {
+          "qps": 1148.234781424777,
+          "recall": 0.9515625000000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 964.9988706160002,
+          "recall": 0.97578125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 398.4033847477628,
+          "recall": 0.9710937500000001
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 28.79130342505684,
+          "recall": 0.9812500000000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 449.1914706753816,
+          "recall": 0.9222656250000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 353.82852416477056,
+          "recall": 0.8617187500000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.05,
+      "empirical_sel": 0.050042703125,
+      "methods": {
+        "PRISM": {
+          "qps": 8766.328014407503,
+          "recall": 0.95234375,
+          "param": 80
+        },
+        "PRISM_Regime1": {
+          "qps": 2714.6569893376745,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 9212.442352890708,
+          "recall": 0.95234375
+        },
+        "PRISM_Regime3": {
+          "qps": 5889.04319995722,
+          "recall": 0.95234375
+        },
+        "B7_HostOffload": {
+          "qps": 467.15082104704595,
+          "recall": 0.95234375
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 894.4384525385417,
+          "recall": 0.97578125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 409.2330715101768,
+          "recall": 0.96484375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 19.835600270195954,
+          "recall": 0.9820312500000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 862.6337953823585,
+          "recall": 0.91875
+        },
+        "B5_ACORN_48T": {
+          "qps": 297.2138940814575,
+          "recall": 0.8671875
+        }
+      }
+    },
+    {
+      "target_sel": 0.1,
+      "empirical_sel": 0.100093259375,
+      "methods": {
+        "PRISM": {
+          "qps": 7185.066551035565,
+          "recall": 0.95625,
+          "param": 64
+        },
+        "PRISM_Regime1": {
+          "qps": 2087.319870679141,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 7477.329736140667,
+          "recall": 0.95625
+        },
+        "PRISM_Regime3": {
+          "qps": 5663.657817518556,
+          "recall": 0.95625
+        },
+        "B7_HostOffload": {
+          "qps": 287.4783221350568,
+          "recall": 0.95625
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 851.1179548279083,
+          "recall": 0.980078125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 403.55247625950295,
+          "recall": 0.99609375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 15.777725273481794,
+          "recall": 0.9867187500000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 874.212371031226,
+          "recall": 0.94453125
+        },
+        "B5_ACORN_48T": {
+          "qps": 263.38120833590494,
+          "recall": 0.83515625
+        }
+      }
+    },
+    {
+      "target_sel": 0.2,
+      "empirical_sel": 0.20001715625,
+      "methods": {
+        "PRISM": {
+          "qps": 5576.748321963778,
+          "recall": 0.966796875,
+          "param": 64
+        },
+        "PRISM_Regime1": {
+          "qps": 1514.021933524281,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 5603.019516952769,
+          "recall": 0.966796875
+        },
+        "PRISM_Regime3": {
+          "qps": 4885.0352881798235,
+          "recall": 0.966796875
+        },
+        "B7_HostOffload": {
+          "qps": 143.09062864310485,
+          "recall": 0.966796875
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 865.8919154618783,
+          "recall": 0.934375
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 410.69171960480276,
+          "recall": 0.97578125
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 12.232778161736018,
+          "recall": 0.986328125
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 463.2968151445385,
+          "recall": 0.976953125
+        },
+        "B5_ACORN_48T": {
+          "qps": 283.5309743857081,
+          "recall": 0.753125
+        }
+      }
+    },
+    {
+      "target_sel": 0.4,
+      "empirical_sel": 0.40001045,
+      "methods": {
+        "PRISM": {
+          "qps": 4330.681779029389,
+          "recall": 0.969140625,
+          "param": 64
+        },
+        "PRISM_Regime1": {
+          "qps": 1246.1689892366412,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 4439.600508886838,
+          "recall": 0.969140625
+        },
+        "PRISM_Regime3": {
+          "qps": 4399.460251258981,
+          "recall": 0.969140625
+        },
+        "B7_HostOffload": {
+          "qps": 72.54401755721598,
+          "recall": 0.969140625
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 829.0810208666234,
+          "recall": 0.953125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 415.3319552693023,
+          "recall": 0.9765625
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 9.382489819701552,
+          "recall": 0.9890625
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 1747.399451767047,
+          "recall": 0.966015625
+        },
+        "B5_ACORN_48T": {
+          "qps": 325.0148856453392,
+          "recall": 0.59765625
+        }
+      }
+    },
+    {
+      "target_sel": 0.8,
+      "empirical_sel": 0.8002010374999999,
+      "methods": {
+        "PRISM": {
+          "qps": 3512.874201064239,
+          "recall": 0.9671875000000001,
+          "param": 64
+        },
+        "PRISM_Regime1": {
+          "qps": 921.6329162146685,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 3304.882213668514,
+          "recall": 0.9671875000000001
+        },
+        "PRISM_Regime3": {
+          "qps": 3509.852607336744,
+          "recall": 0.9671875000000001
+        },
+        "B7_HostOffload": {
+          "qps": 37.054187987476,
+          "recall": 0.9671875000000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 754.030414722812,
+          "recall": 0.958984375
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 413.1626903810496,
+          "recall": 0.96875
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 6.0797175385039095,
+          "recall": 0.9875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 1749.0673644731628,
+          "recall": 0.977734375
+        },
+        "B5_ACORN_48T": {
+          "qps": 380.20671449838557,
+          "recall": 0.4359375
+        }
+      }
+    }
+  ],
+  "convlog1m": [
+    {
+      "target_sel": 0.0005,
+      "empirical_sel": 0.0021131187500000002,
+      "methods": {
+        "PRISM": {
+          "qps": 6654.595669130596,
+          "recall": 0.951953125,
+          "param": 128
+        },
+        "PRISM_Regime1": {
+          "qps": 5117.939418090624,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 19268.444980721597,
+          "recall": 0.7820312500000001
+        },
+        "PRISM_Regime3": {
+          "qps": 9167.659891102527,
+          "recall": 0.7820312500000001
+        },
+        "B7_HostOffload": {
+          "qps": 8511.544684050674,
+          "recall": 0.7820312500000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 437.40626507772583,
+          "recall": 0.9574218750000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 148.1578511148132,
+          "recall": 0.976171875
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 67.30433445369002,
+          "recall": 0.969921875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 265.07807137493575,
+          "recall": 0.310546875
+        },
+        "B5_ACORN_48T": {
+          "qps": 514.9157376614119,
+          "recall": 0.651953125
+        }
+      }
+    },
+    {
+      "target_sel": 0.002,
+      "empirical_sel": 0.00636375,
+      "methods": {
+        "PRISM": {
+          "qps": 5927.153992721585,
+          "recall": 0.955859375,
+          "param": 192
+        },
+        "PRISM_Regime1": {
+          "qps": 4032.6950898198907,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 12400.739057915609,
+          "recall": 0.88984375
+        },
+        "PRISM_Regime3": {
+          "qps": 5799.376236216672,
+          "recall": 0.88984375
+        },
+        "B7_HostOffload": {
+          "qps": 2017.2993564016508,
+          "recall": 0.88984375
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 422.68049673184976,
+          "recall": 0.9730468750000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 272.20877109790007,
+          "recall": 0.978125
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 50.07440816120317,
+          "recall": 0.978515625
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 265.10871955660616,
+          "recall": 0.591015625
+        },
+        "B5_ACORN_48T": {
+          "qps": 365.91413098203003,
+          "recall": 0.8769531250000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.005,
+      "empirical_sel": 0.011932921875,
+      "methods": {
+        "PRISM": {
+          "qps": 5658.846397827803,
+          "recall": 0.96015625,
+          "param": 256
+        },
+        "PRISM_Regime1": {
+          "qps": 3243.243599418043,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 9249.236759786798,
+          "recall": 0.944921875
+        },
+        "PRISM_Regime3": {
+          "qps": 3410.9582668163002,
+          "recall": 0.944921875
+        },
+        "B7_HostOffload": {
+          "qps": 800.5254579770697,
+          "recall": 0.944921875
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 394.6818509297697,
+          "recall": 0.98359375
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 338.3249263363497,
+          "recall": 0.963671875
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 39.16160286066244,
+          "recall": 0.9867187500000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 265.2376483392502,
+          "recall": 0.74765625
+        },
+        "B5_ACORN_48T": {
+          "qps": 323.8729565475232,
+          "recall": 0.8828125
+        }
+      }
+    },
+    {
+      "target_sel": 0.01,
+      "empirical_sel": 0.018870540625,
+      "methods": {
+        "PRISM": {
+          "qps": 5584.067495313272,
+          "recall": 0.9585937500000001,
+          "param": 256
+        },
+        "PRISM_Regime1": {
+          "qps": 2765.460734189539,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 7360.7939480788,
+          "recall": 0.9546875000000001
+        },
+        "PRISM_Regime3": {
+          "qps": 3192.6759154517354,
+          "recall": 0.9546875000000001
+        },
+        "B7_HostOffload": {
+          "qps": 521.5112169629766,
+          "recall": 0.9546875000000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 934.3984738549681,
+          "recall": 0.9394531250000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 359.20050399685215,
+          "recall": 0.950390625
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 38.95664055532411,
+          "recall": 0.9457031250000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 265.0277141228409,
+          "recall": 0.808203125
+        },
+        "B5_ACORN_48T": {
+          "qps": 300.0027531137488,
+          "recall": 0.8871093750000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.02,
+      "empirical_sel": 0.030354546875,
+      "methods": {
+        "PRISM": {
+          "qps": 5314.6336362042775,
+          "recall": 0.96953125,
+          "param": 256
+        },
+        "PRISM_Regime1": {
+          "qps": 2504.129521619799,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 6608.344554066854,
+          "recall": 0.96875
+        },
+        "PRISM_Regime3": {
+          "qps": 3067.1653963978447,
+          "recall": 0.96875
+        },
+        "B7_HostOffload": {
+          "qps": 319.3472727000829,
+          "recall": 0.96875
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 361.14950419424054,
+          "recall": 0.989453125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 376.55658653764846,
+          "recall": 0.9542968749999999
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 30.30352896873071,
+          "recall": 0.95703125
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 271.0343803221641,
+          "recall": 0.82421875
+        },
+        "B5_ACORN_48T": {
+          "qps": 262.2286276447612,
+          "recall": 0.8812500000000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.05,
+      "empirical_sel": 0.06718983749999999,
+      "methods": {
+        "PRISM": {
+          "qps": 6318.67884614161,
+          "recall": 0.953125,
+          "param": 160
+        },
+        "PRISM_Regime1": {
+          "qps": 1836.9782401694652,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 6594.1752929762,
+          "recall": 0.953125
+        },
+        "PRISM_Regime3": {
+          "qps": 3912.9572619476644,
+          "recall": 0.953125
+        },
+        "B7_HostOffload": {
+          "qps": 235.32168469035685,
+          "recall": 0.953125
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 774.4775654594712,
+          "recall": 0.9691406250000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 402.80536732938566,
+          "recall": 0.93359375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 21.83867411391463,
+          "recall": 0.9703125000000001
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 277.25285154328554,
+          "recall": 0.808203125
+        },
+        "B5_ACORN_48T": {
+          "qps": 219.4276935067561,
+          "recall": 0.8617187500000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.1,
+      "empirical_sel": 0.1280854125,
+      "methods": {
+        "PRISM": {
+          "qps": 5427.863160063438,
+          "recall": 0.9652343750000001,
+          "param": 160
+        },
+        "PRISM_Regime1": {
+          "qps": 1492.1468170158378,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 5601.852533043804,
+          "recall": 0.9652343750000001
+        },
+        "PRISM_Regime3": {
+          "qps": 3744.8163971166073,
+          "recall": 0.9652343750000001
+        },
+        "B7_HostOffload": {
+          "qps": 123.60753906756011,
+          "recall": 0.9652343750000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 714.5757697552788,
+          "recall": 0.9792968750000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 410.94868566921195,
+          "recall": 0.940234375
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 16.827768308635992,
+          "recall": 0.96796875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 278.5685976665697,
+          "recall": 0.8296875
+        },
+        "B5_ACORN_48T": {
+          "qps": 246.2490439821091,
+          "recall": 0.805859375
+        }
+      }
+    },
+    {
+      "target_sel": 0.2,
+      "empirical_sel": 0.24988595624999999,
+      "methods": {
+        "PRISM": {
+          "qps": 4735.853991241635,
+          "recall": 0.962890625,
+          "param": 128
+        },
+        "PRISM_Regime1": {
+          "qps": 1265.7603526444034,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 4847.518453217881,
+          "recall": 0.962890625
+        },
+        "PRISM_Regime3": {
+          "qps": 3975.4957149418283,
+          "recall": 0.962890625
+        },
+        "B7_HostOffload": {
+          "qps": 78.61167526200391,
+          "recall": 0.962890625
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 610.9494038677144,
+          "recall": 0.98046875
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 410.62904364532375,
+          "recall": 0.975
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 12.919441126447445,
+          "recall": 0.9796875
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 279.55357011706445,
+          "recall": 0.901171875
+        },
+        "B5_ACORN_48T": {
+          "qps": 297.67929858472183,
+          "recall": 0.67421875
+        }
+      }
+    },
+    {
+      "target_sel": 0.4,
+      "empirical_sel": 0.470585365625,
+      "methods": {
+        "PRISM": {
+          "qps": 4284.926908828818,
+          "recall": 0.9546875,
+          "param": 80
+        },
+        "PRISM_Regime1": {
+          "qps": 1095.6231007002268,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 5084.690867457185,
+          "recall": 0.9546875
+        },
+        "PRISM_Regime3": {
+          "qps": 4853.419887463177,
+          "recall": 0.9546875
+        },
+        "B7_HostOffload": {
+          "qps": 65.20430510578264,
+          "recall": 0.9546875
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 839.3413789501856,
+          "recall": 0.9382812500000001
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 413.7804972041253,
+          "recall": 0.975
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 9.772642703126296,
+          "recall": 0.9859375
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 279.73008030064796,
+          "recall": 0.9515625
+        },
+        "B5_ACORN_48T": {
+          "qps": 348.6358904874785,
+          "recall": 0.5667968750000001
+        }
+      }
+    },
+    {
+      "target_sel": 0.8,
+      "empirical_sel": 0.832808228125,
+      "methods": {
+        "PRISM": {
+          "qps": 3470.0293993309133,
+          "recall": 0.9515625000000001,
+          "param": 80
+        },
+        "PRISM_Regime1": {
+          "qps": 850.3104467567003,
+          "recall": 1.0
+        },
+        "PRISM_Regime2": {
+          "qps": 4028.6471945151825,
+          "recall": 0.9515625000000001
+        },
+        "PRISM_Regime3": {
+          "qps": 4259.550288975373,
+          "recall": 0.9515625000000001
+        },
+        "B7_HostOffload": {
+          "qps": 36.56549452073944,
+          "recall": 0.9515625000000001
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "qps": 761.9007090132133,
+          "recall": 0.939453125
+        },
+        "B2b_cuVS_CAGRA": {
+          "qps": 417.39348717372604,
+          "recall": 0.98671875
+        },
+        "B4_VecFlow_LabelGPU": {
+          "qps": 7.538351778022287,
+          "recall": 0.984375
+        },
+        "B3_Faiss_PostFilter": {
+          "qps": 1046.5459219227546,
+          "recall": 0.9703125000000001
+        },
+        "B5_ACORN_48T": {
+          "qps": 378.705447673422,
+          "recall": 0.433984375
+        }
+      }
+    }
+  ]
+}

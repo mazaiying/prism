@@ -1,0 +1,5047 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "total_lossless_audits": 16,
+  "total_mismatches": 0,
+  "datasets": {
+    "convlog1m": {
+      "N": 1000000,
+      "D": 1024,
+      "nlist": 1024,
+      "is_real_tabular": true,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.024973999708890915,
+          "layout_time_s": 12.255513671785593,
+          "encode_time_s": 4.2725954577326775,
+          "total_build_s": 16.553217191249132,
+          "vram_headers_mb": 0.96929931640625,
+          "vram_slap_cols_mb": 7.75439453125,
+          "vram_sketch_mb": 635.8603515625,
+          "vram_cluster_meta_mb": 12.003910064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 656.5879554748535,
+          "total_gpu_vram_gib": 0.6411991752684116,
+          "host_pinned_gib": 3.884769916534424
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.016591764986515045,
+          "layout_time_s": 0.0971594974398613,
+          "encode_time_s": 3.796992588788271,
+          "total_build_s": 3.911051232367754,
+          "vram_headers_mb": 0.96929931640625,
+          "vram_slap_cols_mb": 7.75439453125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 12.003910064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 20.727603912353516,
+          "total_gpu_vram_gib": 0.02024180069565773,
+          "host_pinned_gib": 3.884769916534424
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.015170812606811523,
+          "layout_time_s": 0.09498083963990211,
+          "encode_time_s": 3.718407280743122,
+          "total_build_s": 3.8286823965609074,
+          "vram_headers_mb": 0.96929931640625,
+          "vram_slap_cols_mb": 7.75439453125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 12.003910064697266,
+          "vram_exact_vecs_mb": 3978.00439453125,
+          "total_gpu_vram_mb": 3998.7319984436035,
+          "total_gpu_vram_gib": 3.9050117172300816,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "total_build_s": 4.78633750602603,
+          "total_gpu_vram_gib": 4.38690185546875
+        },
+        "B2b_cuVS_CAGRA": {
+          "total_build_s": 15.676893271505833,
+          "total_gpu_vram_gib": 5.91278076171875
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 62.133599795401096,
+          "total_gpu_vram_gib": 3.8295984268188477
+        },
+        "B4_VecFlow_LabelGPU": {
+          "total_build_s": 8.799917962402105,
+          "total_gpu_vram_gib": 7.864832878112792
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 23.582250483334064,
+          "host_ram_gib": 4.0531158447265625,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 170.88337951526046,
+          "host_ram_gib": 3.9115548133850098
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 320,
+              "qps": 4598.87325783557,
+              "latency_ms": 55.66580891609192,
+              "recall_at_10": 0.9625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.27786948413983,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 151.0357640701655,
+              "latency_ms": 1694.9627896149952,
+              "recall_at_10": 0.9625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 7274.09515113932,
+              "latency_ms": 35.19338071346283,
+              "recall_at_10": 0.9625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 360.7980153465911,
+              "latency_ms": 709.5382710297903,
+              "recall_at_10": 0.975390625,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 406.23983263674245,
+              "latency_ms": 630.1696176330248,
+              "recall_at_10": 0.916015625,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 277.0545148136779,
+              "latency_ms": 924.0058772265911,
+              "recall_at_10": 0.6671875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 408.5518152103691,
+              "latency_ms": 626.6035065054893,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 245.20823260224708,
+              "latency_ms": 1044.0106242895126,
+              "recall_at_10": 0.853515625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1121.338655141811,
+              "latency_ms": 228.29855978488922,
+              "recall_at_10": 0.6359375
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 1834.4516295414824,
+              "latency_ms": 139.55124020576477,
+              "recall_at_10": 1.0,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.18585672984553,
+              "r1_q": 256,
+              "r2_q": 0,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 55.91238859912807,
+              "latency_ms": 4578.59172920386,
+              "recall_at_10": 1.0
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 3640.230944535775,
+              "latency_ms": 70.32520845532417,
+              "recall_at_10": 1.0
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 359.87833032674547,
+              "latency_ms": 711.3515275220076,
+              "recall_at_10": 0.975390625,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 412.5237311666105,
+              "latency_ms": 620.5703591307005,
+              "recall_at_10": 0.9136718749999999,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 277.00632158069976,
+              "latency_ms": 924.1666346788406,
+              "recall_at_10": 0.6671875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 408.2935334872554,
+              "latency_ms": 626.9998885691166,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 245.61603428660104,
+              "latency_ms": 1042.2772305707138,
+              "recall_at_10": 0.853515625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1142.6390106679432,
+              "latency_ms": 224.04276207089424,
+              "recall_at_10": 0.6359375
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 3545.3606572934086,
+              "latency_ms": 72.20704033970833,
+              "recall_at_10": 0.9609375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.26119859231494,
+              "r1_q": 2,
+              "r2_q": 254,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 54.601583792813706,
+              "latency_ms": 4688.508688161771,
+              "recall_at_10": 0.9609375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 2942.087996227249,
+              "latency_ms": 87.0130330324173,
+              "recall_at_10": 0.9609375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 638.3413623928417,
+              "latency_ms": 401.03934208552045,
+              "recall_at_10": 0.96875,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 416.5931238437285,
+              "latency_ms": 614.5084624489149,
+              "recall_at_10": 0.9484375,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 270.95898167098363,
+              "latency_ms": 944.7924494743347,
+              "recall_at_10": 0.8675781250000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 9.138046673114406,
+              "latency_ms": 28014.73981887102,
+              "recall_at_10": 0.9500000000000001
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 267.60861680605683,
+              "latency_ms": 956.6209154824415,
+              "recall_at_10": 0.701171875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1218.7680632663205,
+              "latency_ms": 210.04816889762878,
+              "recall_at_10": 0.7476562500000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 512,
+              "qps": 1644.603894973398,
+              "latency_ms": 155.66058233380318,
+              "recall_at_10": 0.996875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.75114621490164,
+              "r1_q": 2,
+              "r2_q": 254,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 17.869913939111623,
+              "latency_ms": 14325.754498442015,
+              "recall_at_10": 0.996875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 989.5026324483837,
+              "latency_ms": 258.7158352136612,
+              "recall_at_10": 0.996875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 277.2675181953756,
+              "latency_ms": 923.2960343360901,
+              "recall_at_10": 0.990234375,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 416.1746613567899,
+              "latency_ms": 615.1263490319252,
+              "recall_at_10": 0.951171875,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 271.1429036846001,
+              "latency_ms": 944.1515766084194,
+              "recall_at_10": 0.8675781250000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 55,
+              "qps": 6.498717499117935,
+              "latency_ms": 39392.38781109452,
+              "recall_at_10": 0.99453125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 273.49631260657486,
+              "latency_ms": 936.0272449751695,
+              "recall_at_10": 0.701171875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1223.4746466687097,
+              "latency_ms": 209.2401348054409,
+              "recall_at_10": 0.7476562500000001
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 256,
+              "qps": 4925.5889747620995,
+              "latency_ms": 51.973479986190796,
+              "recall_at_10": 0.9683593750000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.40062769185343,
+              "r1_q": 8,
+              "r2_q": 248,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 326.3866862399268,
+              "latency_ms": 784.3457187215487,
+              "recall_at_10": 0.966796875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 13449.31289497138,
+              "latency_ms": 19.034429639577866,
+              "recall_at_10": 0.9683593750000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 367.11429922383456,
+              "latency_ms": 697.3305058976015,
+              "recall_at_10": 0.987109375,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 382.16773635765907,
+              "latency_ms": 669.8629309733709,
+              "recall_at_10": 0.94140625,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 271.06262246674527,
+              "latency_ms": 944.4312080740929,
+              "recall_at_10": 0.78359375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 25.479996317178124,
+              "latency_ms": 10047.097213566303,
+              "recall_at_10": 0.973828125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 266.39349643239973,
+              "latency_ms": 960.9844212730726,
+              "recall_at_10": 0.8835937500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1177.4418707925558,
+              "latency_ms": 217.42049977183342,
+              "recall_at_10": 0.6578124999999999
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 512,
+              "qps": 3321.5017017944087,
+              "latency_ms": 77.07357183098793,
+              "recall_at_10": 0.9917968749999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.01361567861765,
+              "r1_q": 8,
+              "r2_q": 248,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 170.37495044308164,
+              "latency_ms": 1502.5683020551999,
+              "recall_at_10": 0.99140625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 7873.262597167134,
+              "latency_ms": 32.515110075473785,
+              "recall_at_10": 0.9917968749999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 366.0474183737516,
+              "latency_ms": 699.3629435698191,
+              "recall_at_10": 0.987109375,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 377.7052014288175,
+              "latency_ms": 677.77726923426,
+              "recall_at_10": 0.94296875,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 270.9514647317157,
+              "latency_ms": 944.8186606168747,
+              "recall_at_10": 0.78359375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 55,
+              "qps": 23.947413018130085,
+              "latency_ms": 10690.089982002974,
+              "recall_at_10": 0.9953125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 263.18858861149283,
+              "latency_ms": 972.6865490277609,
+              "recall_at_10": 0.8835937500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1168.4310966838018,
+              "latency_ms": 219.09721568226814,
+              "recall_at_10": 0.6578124999999999
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 2593.2262985368243,
+              "latency_ms": 98.71872738003731,
+              "recall_at_10": 0.9554687500000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.80068658690645,
+              "r1_q": 51,
+              "r2_q": 183,
+              "r3_q": 22
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 160,
+              "qps": 74.5257487565834,
+              "latency_ms": 3435.0543841719627,
+              "recall_at_10": 0.9324218750000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 3438.3589232342797,
+              "latency_ms": 74.4541235268116,
+              "recall_at_10": 0.9554687500000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 541.7935978367954,
+              "latency_ms": 472.504660487175,
+              "recall_at_10": 0.9574218750000001,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 377.19494528211953,
+              "latency_ms": 678.6941426495711,
+              "recall_at_10": 0.963671875,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 264.825266927558,
+              "latency_ms": 966.6751325130463,
+              "recall_at_10": 0.803125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 19.14472988596613,
+              "latency_ms": 13371.82616442442,
+              "recall_at_10": 0.962890625
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 308.1879043016291,
+              "latency_ms": 830.6620617707571,
+              "recall_at_10": 0.7503906250000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1070.975928261272,
+              "latency_ms": 239.03431743383408,
+              "recall_at_10": 0.6878906250000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 512,
+              "qps": 1391.7110318642565,
+              "latency_ms": 183.94623175263405,
+              "recall_at_10": 0.990234375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.58882248462346,
+              "r1_q": 53,
+              "r2_q": 181,
+              "r3_q": 22
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 25.014857056645297,
+              "latency_ms": 10233.91816392541,
+              "recall_at_10": 0.9886718750000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 1245.0095018573247,
+              "latency_ms": 205.62092065811157,
+              "recall_at_10": 0.990234375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 240.77529174760218,
+              "latency_ms": 1063.2320207854111,
+              "recall_at_10": 0.990625,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 374.1581465314388,
+              "latency_ms": 684.2026623586813,
+              "recall_at_10": 0.9585937499999999,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 264.8878676289123,
+              "latency_ms": 966.4466790854931,
+              "recall_at_10": 0.803125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "RECALL_MISS",
+              "param": 35,
+              "qps": 14.642116046876776,
+              "latency_ms": 17483.81171002984,
+              "recall_at_10": 0.9859375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 299.7553910034818,
+              "latency_ms": 854.0296778082848,
+              "recall_at_10": 0.7503906250000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1084.7587182897253,
+              "latency_ms": 235.99718138575554,
+              "recall_at_10": 0.6878906250000001
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "bge1024": {
+      "N": 1000000,
+      "D": 1024,
+      "nlist": 1024,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.017320137470960617,
+          "layout_time_s": 10.577654276043177,
+          "encode_time_s": 5.851025812327862,
+          "total_build_s": 16.44612268730998,
+          "vram_headers_mb": 0.9683837890625,
+          "vram_slap_cols_mb": 7.7470703125,
+          "vram_sketch_mb": 635.259765625,
+          "vram_cluster_meta_mb": 12.003910064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 655.9791297912598,
+          "total_gpu_vram_gib": 0.6406046189367771,
+          "host_pinned_gib": 3.881100654602051
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.016608718782663345,
+          "layout_time_s": 0.09671953693032265,
+          "encode_time_s": 4.845063932240009,
+          "total_build_s": 4.958591569215059,
+          "vram_headers_mb": 0.9683837890625,
+          "vram_slap_cols_mb": 7.7470703125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 12.003910064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 20.719364166259766,
+          "total_gpu_vram_gib": 0.020233754068613052,
+          "host_pinned_gib": 3.881100654602051
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.0260029174387455,
+          "layout_time_s": 0.09861257299780846,
+          "encode_time_s": 6.373011082410812,
+          "total_build_s": 6.497775584459305,
+          "vram_headers_mb": 0.9683837890625,
+          "vram_slap_cols_mb": 7.7470703125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 12.003910064697266,
+          "vram_exact_vecs_mb": 3974.2470703125,
+          "total_gpu_vram_mb": 3994.9664344787598,
+          "total_gpu_vram_gib": 3.901334408670664,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "total_build_s": 7.6207964941859245,
+          "total_gpu_vram_gib": 4.38690185546875
+        },
+        "B2b_cuVS_CAGRA": {
+          "total_build_s": 15.426759734749794,
+          "total_gpu_vram_gib": 5.91278076171875
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 62.298736210912466,
+          "total_gpu_vram_gib": 3.8295984268188477
+        },
+        "B4_VecFlow_LabelGPU": {
+          "total_build_s": 15.646267659962177,
+          "total_gpu_vram_gib": 7.864832878112792
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 26.65449533984065,
+          "host_ram_gib": 4.0531158447265625,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 170.48869766667485,
+          "host_ram_gib": 3.9115548133850098
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 48,
+              "qps": 10153.14923863064,
+              "latency_ms": 25.213851779699326,
+              "recall_at_10": 0.954296875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 92.84082281697044,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 907.0264587739389,
+              "latency_ms": 282.2409396370252,
+              "recall_at_10": 0.954296875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 31264.388796563002,
+              "latency_ms": 8.18822979927063,
+              "recall_at_10": 0.954296875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 940.9725222611804,
+              "latency_ms": 272.0589538415273,
+              "recall_at_10": 0.9750000000000001,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 409.3791271430823,
+              "latency_ms": 625.3372070689996,
+              "recall_at_10": 0.97421875,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 1933.288348664344,
+              "latency_ms": 132.41687417030334,
+              "recall_at_10": 0.962890625
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 428.24132143066817,
+              "latency_ms": 597.7937839925289,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 308.8075039428754,
+              "latency_ms": 828.9953991770744,
+              "recall_at_10": 0.953125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1585.5503747748644,
+              "latency_ms": 161.45813092589378,
+              "recall_at_10": 0.8289062500000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 384,
+              "qps": 4808.510642752326,
+              "latency_ms": 53.23893800377846,
+              "recall_at_10": 0.9925781250000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.92293300971276,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 131.94089551989723,
+              "latency_ms": 1940.2627137800057,
+              "recall_at_10": 0.9925781250000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 6328.687797007156,
+              "latency_ms": 40.450723469257355,
+              "recall_at_10": 0.9925781250000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 341.31678795662555,
+              "latency_ms": 750.0363563497862,
+              "recall_at_10": 0.9921875,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 378.2778454867127,
+              "latency_ms": 676.7512373626232,
+              "recall_at_10": 0.9750000000000001,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 509.73548966834625,
+              "latency_ms": 502.2212602198124,
+              "recall_at_10": 0.9886718750000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 428.61893944296776,
+              "latency_ms": 597.2671210765839,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 304.93099419108836,
+              "latency_ms": 839.5342056949934,
+              "recall_at_10": 0.953125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1599.3777818202148,
+              "latency_ms": 160.0622460246086,
+              "recall_at_10": 0.8289062500000001
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 11727.680491861845,
+              "latency_ms": 21.828698366880417,
+              "recall_at_10": 0.959765625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.30443310966913,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 873.011591845222,
+              "latency_ms": 293.2378016412258,
+              "recall_at_10": 0.959765625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 27759.53208512514,
+              "latency_ms": 9.222057461738586,
+              "recall_at_10": 0.959765625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 972.5625917763867,
+              "latency_ms": 263.222133119901,
+              "recall_at_10": 0.9730468750000001,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 331.85407834310604,
+              "latency_ms": 771.4233957231045,
+              "recall_at_10": 0.930859375,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 266.1647205527831,
+              "latency_ms": 961.8104137480259,
+              "recall_at_10": 0.86484375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 15.663204331304113,
+              "latency_ms": 16344.03756633401,
+              "recall_at_10": 0.9625
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 324.46052661175435,
+              "latency_ms": 789.0019863843918,
+              "recall_at_10": 0.939453125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1400.6481009537442,
+              "latency_ms": 182.77253210544586,
+              "recall_at_10": 0.706640625
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 512,
+              "qps": 5807.802491833308,
+              "latency_ms": 44.078633934259415,
+              "recall_at_10": 0.99140625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.58095608835335,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 251.78361330206653,
+              "latency_ms": 1016.7460727194945,
+              "recall_at_10": 0.99140625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 10604.372796416312,
+              "latency_ms": 24.140984565019608,
+              "recall_at_10": 0.99140625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 389.30311269753213,
+              "latency_ms": 657.5852893292904,
+              "recall_at_10": 0.988671875,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 319.84435036583506,
+              "latency_ms": 800.3893134494623,
+              "recall_at_10": 0.92578125,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 266.14605721946776,
+              "latency_ms": 961.8778601288795,
+              "recall_at_10": 0.86484375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "RECALL_MISS",
+              "param": 35,
+              "qps": 12.920920629937847,
+              "latency_ms": 19812.829699367285,
+              "recall_at_10": 0.98515625
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 302.95446795533127,
+              "latency_ms": 845.0114689767361,
+              "recall_at_10": 0.939453125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1406.0444316697306,
+              "latency_ms": 182.07105994224548,
+              "recall_at_10": 0.706640625
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 12163.63354148197,
+              "latency_ms": 21.046342700719833,
+              "recall_at_10": 0.962109375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.0108831791043,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 921.5433483617952,
+              "latency_ms": 277.79485409458476,
+              "recall_at_10": 0.962109375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 30210.04969045893,
+              "latency_ms": 8.474001288414001,
+              "recall_at_10": 0.962109375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 895.160649855454,
+              "latency_ms": 285.9821865955989,
+              "recall_at_10": 0.97578125,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 314.469972023537,
+              "latency_ms": 814.0681870281696,
+              "recall_at_10": 0.9515625,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 266.1510359140405,
+              "latency_ms": 961.859866976738,
+              "recall_at_10": 0.93359375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 37.61109069093925,
+              "latency_ms": 6806.50295689702,
+              "recall_at_10": 0.958203125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 280.9100318845942,
+              "latency_ms": 911.3238081336021,
+              "recall_at_10": 0.948046875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1477.092706392982,
+              "latency_ms": 173.3134277164936,
+              "recall_at_10": 0.746484375
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 6492.978859089135,
+              "latency_ms": 39.42720368504524,
+              "recall_at_10": 0.9917968749999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.55257161240165,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 255.33293000182803,
+              "latency_ms": 1002.6125498116016,
+              "recall_at_10": 0.9917968749999999
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 11379.484682272334,
+              "latency_ms": 22.496625036001205,
+              "recall_at_10": 0.9917968749999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 384.76398386691886,
+              "latency_ms": 665.3429393966993,
+              "recall_at_10": 0.9890625,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 306.63517356666875,
+              "latency_ms": 834.8683454096317,
+              "recall_at_10": 0.95546875,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 266.1006895890019,
+              "latency_ms": 962.0418511331081,
+              "recall_at_10": 0.93359375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "RECALL_MISS",
+              "param": 35,
+              "qps": 29.140632619777417,
+              "latency_ms": 8784.984298050404,
+              "recall_at_10": 0.98359375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 260.8708144755321,
+              "latency_ms": 981.3286339243253,
+              "recall_at_10": 0.948046875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1469.2809904979215,
+              "latency_ms": 174.23488199710846,
+              "recall_at_10": 0.746484375
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 80,
+              "qps": 4951.261815193379,
+              "latency_ms": 51.703991740942,
+              "recall_at_10": 0.96640625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.822998199628,
+              "r1_q": 87,
+              "r2_q": 159,
+              "r3_q": 10
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 80,
+              "qps": 367.5746067051471,
+              "latency_ms": 696.4572506646315,
+              "recall_at_10": 0.921875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 11664.956925392697,
+              "latency_ms": 21.946073323488235,
+              "recall_at_10": 0.96640625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 275.6602973940227,
+              "latency_ms": 928.6792563895384,
+              "recall_at_10": 0.985546875,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 256,
+              "qps": 364.4069371808617,
+              "latency_ms": 702.5113242367903,
+              "recall_at_10": 0.9519531250000001,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 260.3825953370548,
+              "latency_ms": 983.1686317920685,
+              "recall_at_10": 0.76640625
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 26.901974155296642,
+              "latency_ms": 9516.030255705118,
+              "recall_at_10": 0.96875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 392.5856030142212,
+              "latency_ms": 652.0870812237263,
+              "recall_at_10": 0.847265625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1066.0718369103688,
+              "latency_ms": 240.13391137123108,
+              "recall_at_10": 0.6421875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 384,
+              "qps": 2575.365301635212,
+              "latency_ms": 99.40337389707565,
+              "recall_at_10": 0.994140625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.20611373806028,
+              "r1_q": 87,
+              "r2_q": 159,
+              "r3_q": 10
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 384,
+              "qps": 85.00268542375208,
+              "latency_ms": 3011.669557541609,
+              "recall_at_10": 0.9796875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 3525.7668686500438,
+              "latency_ms": 72.60831743478775,
+              "recall_at_10": 0.994140625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 273.5262884600297,
+              "latency_ms": 935.9246653815111,
+              "recall_at_10": 0.985546875,
+              "peak_vram_gib": 7.7353
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 337.47061755466865,
+              "latency_ms": 758.5845602055391,
+              "recall_at_10": 0.9761718749999999,
+              "peak_vram_gib": 7.7353
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 260.36596517017193,
+              "latency_ms": 983.2314290106297,
+              "recall_at_10": 0.76640625
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 55,
+              "qps": 20.30109895048726,
+              "latency_ms": 12610.154781490564,
+              "recall_at_10": 0.99609375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 374.2763222666254,
+              "latency_ms": 683.9866290489832,
+              "recall_at_10": 0.847265625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1064.6924043658175,
+              "latency_ms": 240.44503271579742,
+              "recall_at_10": 0.6421875
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "gist1m": {
+      "N": 1000000,
+      "D": 960,
+      "nlist": 1024,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.016143538057804108,
+          "layout_time_s": 7.124514617025852,
+          "encode_time_s": 8.34155010804534,
+          "total_build_s": 15.482354760169983,
+          "vram_headers_mb": 0.9697265625,
+          "vram_slap_cols_mb": 7.7578125,
+          "vram_sketch_mb": 597.3515625,
+          "vram_cluster_meta_mb": 11.253910064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 617.3330116271973,
+          "total_gpu_vram_gib": 0.6028642691671848,
+          "host_pinned_gib": 3.6440505981445312
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.017067011445760727,
+          "layout_time_s": 0.10482897236943245,
+          "encode_time_s": 5.855441641062498,
+          "total_build_s": 5.977609548717737,
+          "vram_headers_mb": 0.9697265625,
+          "vram_slap_cols_mb": 7.7578125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 11.253910064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 19.981449127197266,
+          "total_gpu_vram_gib": 0.01951313391327858,
+          "host_pinned_gib": 3.6440505981445312
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.024036824703216553,
+          "layout_time_s": 0.18230626359581947,
+          "encode_time_s": 5.575249820947647,
+          "total_build_s": 5.78176399320364,
+          "vram_headers_mb": 0.9697265625,
+          "vram_slap_cols_mb": 7.7578125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 11.253910064697266,
+          "vram_exact_vecs_mb": 3731.5078125,
+          "total_gpu_vram_mb": 3751.4892616271973,
+          "total_gpu_vram_gib": 3.66356373205781,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "total_build_s": 4.721360884606838,
+          "total_gpu_vram_gib": 4.112720489501953
+        },
+        "B2b_cuVS_CAGRA": {
+          "total_build_s": 16.624421402812004,
+          "total_gpu_vram_gib": 5.543231964111328
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 57.64063165336847,
+          "total_gpu_vram_gib": 3.591179847717285
+        },
+        "B4_VecFlow_LabelGPU": {
+          "total_build_s": 11.94195942953229,
+          "total_gpu_vram_gib": 7.376074790954589
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 31.350952446460724,
+          "host_ram_gib": 3.814697265625,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 196.9717021882534,
+          "host_ram_gib": 3.6731362342834473
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 80,
+              "qps": 8547.018091085589,
+              "latency_ms": 29.951966553926468,
+              "recall_at_10": 0.96015625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.88495410887596,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 485.2686848208737,
+              "latency_ms": 527.542798469464,
+              "recall_at_10": 0.96015625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 16599.38616007428,
+              "latency_ms": 15.422257035970688,
+              "recall_at_10": 0.96015625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 926.1022593495902,
+              "latency_ms": 276.42735714713734,
+              "recall_at_10": 0.98359375,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 128,
+              "qps": 425.554709054776,
+              "latency_ms": 601.5677762528261,
+              "recall_at_10": 0.9671875000000001,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 64,
+              "qps": 1670.263888051023,
+              "latency_ms": 153.2691940665245,
+              "recall_at_10": 0.9468750000000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 457.0592719269703,
+              "latency_ms": 560.1024106144905,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 237.55101024538828,
+              "latency_ms": 1077.6632763445377,
+              "recall_at_10": 0.890625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1021.8782609849069,
+              "latency_ms": 250.51907822489738,
+              "recall_at_10": 0.6867187499999999
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 6248.89508981873,
+              "latency_ms": 40.967242419719696,
+              "recall_at_10": 0.994140625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.7743412835306,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 253.91830790448034,
+              "latency_ms": 1008.198274920384,
+              "recall_at_10": 0.994140625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 9975.454669211724,
+              "latency_ms": 25.662990659475327,
+              "recall_at_10": 0.994140625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 810.2033923815472,
+              "latency_ms": 315.9700420995553,
+              "recall_at_10": 0.9972656249999999,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 407.4286423852525,
+              "latency_ms": 628.3308863639832,
+              "recall_at_10": 0.996875,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 866.6752132860809,
+              "latency_ms": 295.38170248270035,
+              "recall_at_10": 0.9867187500000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 456.82036020772404,
+              "latency_ms": 560.3953376412392,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 271.46917600272747,
+              "latency_ms": 943.0168233811855,
+              "recall_at_10": 0.890625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1012.6115560812112,
+              "latency_ms": 252.81165167689323,
+              "recall_at_10": 0.6867187499999999
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 7410.530825799955,
+              "latency_ms": 34.54543352127075,
+              "recall_at_10": 0.9789062500000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.34941866929934,
+              "r1_q": 29,
+              "r2_q": 227,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 761.1721160977085,
+              "latency_ms": 336.3234077890714,
+              "recall_at_10": 0.9750000000000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 16153.102095246297,
+              "latency_ms": 15.848349034786224,
+              "recall_at_10": 0.9789062500000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 1066.6640634953487,
+              "latency_ms": 240.00058571497598,
+              "recall_at_10": 0.9558593750000001,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 382.53891502212383,
+              "latency_ms": 669.2129609485468,
+              "recall_at_10": 0.943359375,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 451.38598482218833,
+              "latency_ms": 567.1421103179455,
+              "recall_at_10": 0.8375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 9.815432312868552,
+              "latency_ms": 26081.37796074152,
+              "recall_at_10": 0.9632812500000001
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 320.4680173942025,
+              "latency_ms": 798.831665267547,
+              "recall_at_10": 0.83125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 836.1800528873309,
+              "latency_ms": 306.15415796637535,
+              "recall_at_10": 0.5773437499999999
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 256,
+              "qps": 6173.039366504798,
+              "latency_ms": 41.47065728902817,
+              "recall_at_10": 0.9976562499999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.97387788164866,
+              "r1_q": 29,
+              "r2_q": 227,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 404.5178136022427,
+              "latency_ms": 632.8522289792696,
+              "recall_at_10": 0.9976562499999999
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 12352.497214375626,
+              "latency_ms": 20.724554359912872,
+              "recall_at_10": 0.9976562499999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 386.078478258218,
+              "latency_ms": 663.0776238938173,
+              "recall_at_10": 1.0,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 387.62071295931224,
+              "latency_ms": 660.4394229749838,
+              "recall_at_10": 0.940625,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 451.3883271390345,
+              "latency_ms": 567.1391673386097,
+              "recall_at_10": 0.8375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 7.453758570075965,
+              "latency_ms": 34345.08880227804,
+              "recall_at_10": 0.9953125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 359.21718502244045,
+              "latency_ms": 712.6607820391655,
+              "recall_at_10": 0.83125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 836.2566648958951,
+              "latency_ms": 306.12611025571823,
+              "recall_at_10": 0.5773437499999999
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 80,
+              "qps": 12092.842614995063,
+              "latency_ms": 21.169546991586685,
+              "recall_at_10": 0.9535156250000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 93.14270024434023,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 1172.3388089277964,
+              "latency_ms": 218.3669072886308,
+              "recall_at_10": 0.9535156250000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 29107.78813604623,
+              "latency_ms": 8.794897049665451,
+              "recall_at_10": 0.9535156250000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 951.1730635887612,
+              "latency_ms": 269.1413474579652,
+              "recall_at_10": 0.975,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 396.1465998925769,
+              "latency_ms": 646.2254126866659,
+              "recall_at_10": 0.94296875,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 451.4644033867262,
+              "latency_ms": 567.043598741293,
+              "recall_at_10": 0.89296875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 33.32289861037247,
+              "latency_ms": 7682.404913008213,
+              "recall_at_10": 0.96875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 331.4426844129402,
+              "latency_ms": 772.3809033632278,
+              "recall_at_10": 0.8500000000000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 922.2513477761964,
+              "latency_ms": 277.5815948843956,
+              "recall_at_10": 0.590234375
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 9535.388373553404,
+              "latency_ms": 26.847359538078308,
+              "recall_at_10": 0.9937499999999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.36149162352707,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 599.7014484732889,
+              "latency_ms": 426.87907566626865,
+              "recall_at_10": 0.9937499999999999
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 18732.707615427014,
+              "latency_ms": 13.665936887264252,
+              "recall_at_10": 0.9937499999999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 893.23889871852,
+              "latency_ms": 286.59746050834656,
+              "recall_at_10": 0.996484375,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 372.70742638363026,
+              "latency_ms": 686.865841348966,
+              "recall_at_10": 0.96875,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 451.4603934269468,
+              "latency_ms": 567.0486353337765,
+              "recall_at_10": 0.89296875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 25.04692743096235,
+              "latency_ms": 10220.814537256956,
+              "recall_at_10": 0.996484375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 322.4280190317872,
+              "latency_ms": 793.9756624400616,
+              "recall_at_10": 0.8500000000000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 932.5982769355657,
+              "latency_ms": 274.50190111994743,
+              "recall_at_10": 0.590234375
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 80,
+              "qps": 4174.028067612675,
+              "latency_ms": 61.33164316415787,
+              "recall_at_10": 0.9609375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.77338628822847,
+              "r1_q": 77,
+              "r2_q": 162,
+              "r3_q": 17
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 80,
+              "qps": 248.9013125040659,
+              "latency_ms": 1028.5200886428356,
+              "recall_at_10": 0.9281250000000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 6793.736682291392,
+              "latency_ms": 37.68176659941673,
+              "recall_at_10": 0.9609375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 780.9881097253766,
+              "latency_ms": 327.7898815770944,
+              "recall_at_10": 0.9597656250000001,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 340.53521891159227,
+              "latency_ms": 751.7577794690927,
+              "recall_at_10": 0.955078125,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 440.02511143567125,
+              "latency_ms": 581.7849785089493,
+              "recall_at_10": 0.783984375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 21.376573867717692,
+              "latency_ms": 11975.726399570704,
+              "recall_at_10": 0.9730468750000001
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 347.83674370713055,
+              "latency_ms": 735.9774510065714,
+              "recall_at_10": 0.746875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 779.0119162524072,
+              "latency_ms": 328.62141728401184,
+              "recall_at_10": 0.583203125
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 192,
+              "qps": 2950.60913780037,
+              "latency_ms": 86.76174581050873,
+              "recall_at_10": 0.9921875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.9683587134661,
+              "r1_q": 77,
+              "r2_q": 162,
+              "r3_q": 17
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 192,
+              "qps": 108.96278638917627,
+              "latency_ms": 2349.4259690244994,
+              "recall_at_10": 0.984765625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 192,
+              "qps": 3730.6528042833606,
+              "latency_ms": 68.62069815397263,
+              "recall_at_10": 0.9921875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 604.3546718396568,
+              "latency_ms": 423.59232405821484,
+              "recall_at_10": 0.989453125,
+              "peak_vram_gib": 7.2556
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 287.2148349274779,
+              "latency_ms": 891.3188626368841,
+              "recall_at_10": 0.951953125,
+              "peak_vram_gib": 7.2556
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 440.1796503667153,
+              "latency_ms": 581.5807245671749,
+              "recall_at_10": 0.783984375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 16.132581770504903,
+              "latency_ms": 15868.507821112871,
+              "recall_at_10": 0.99375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 309.30036988050995,
+              "latency_ms": 827.6744062701861,
+              "recall_at_10": 0.746875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 777.6952754403297,
+              "latency_ms": 329.17777448892593,
+              "recall_at_10": 0.583203125
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "msong": {
+      "N": 994185,
+      "D": 420,
+      "nlist": 1024,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.01325281336903572,
+          "layout_time_s": 3.2819064557552338,
+          "encode_time_s": 3.130810845643282,
+          "total_build_s": 6.4261053539812565,
+          "vram_headers_mb": 0.9637451171875,
+          "vram_slap_cols_mb": 7.7099609375,
+          "vram_sketch_mb": 285.2685546875,
+          "vram_cluster_meta_mb": 5.144535064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 299.08679580688477,
+          "total_gpu_vram_gib": 0.2920769490301609,
+          "host_pinned_gib": 1.5886735916137695
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.01593666523694992,
+          "layout_time_s": 0.09967079758644104,
+          "encode_time_s": 2.751206211745739,
+          "total_build_s": 2.867109052836895,
+          "vram_headers_mb": 0.9637451171875,
+          "vram_slap_cols_mb": 7.7099609375,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 5.144535064697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 13.818241119384766,
+          "total_gpu_vram_gib": 0.013494376093149185,
+          "host_pinned_gib": 1.5886735916137695
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.019054710865020752,
+          "layout_time_s": 0.10001960769295692,
+          "encode_time_s": 1.7407291568815708,
+          "total_build_s": 1.8599327690899372,
+          "vram_headers_mb": 0.9637451171875,
+          "vram_slap_cols_mb": 7.7099609375,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 5.144535064697266,
+          "vram_exact_vecs_mb": 1626.8017578125,
+          "total_gpu_vram_mb": 1640.6199989318848,
+          "total_gpu_vram_gib": 1.6021679677069187,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "total_build_s": 2.537744853645563,
+          "total_gpu_vram_gib": 1.7888521961867807
+        },
+        "B2b_cuVS_CAGRA": {
+          "total_build_s": 11.428679388016462,
+          "total_gpu_vram_gib": 2.411061655730009
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 28.503974743187428,
+          "total_gpu_vram_gib": 1.5703381597995758
+        },
+        "B4_VecFlow_LabelGPU": {
+          "total_build_s": 5.03052056953311,
+          "total_gpu_vram_gib": 3.23326701298356
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 14.555823519825935,
+          "host_ram_gib": 1.7925558239221573,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 88.36289531365037,
+          "host_ram_gib": 1.6518179699778557
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 24,
+              "qps": 25520.885816191774,
+              "latency_ms": 10.030999779701233,
+              "recall_at_10": 0.9730468750000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 90.40575863594323,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 24,
+              "qps": 3441.8047128909325,
+              "latency_ms": 74.37958319981892,
+              "recall_at_10": 0.9730468750000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 24,
+              "qps": 66200.23984860916,
+              "latency_ms": 3.8670554757118225,
+              "recall_at_10": 0.9730468750000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 32,
+              "qps": 1135.2004469076348,
+              "latency_ms": 225.51083440581957,
+              "recall_at_10": 0.98359375,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 64,
+              "qps": 442.6668542475303,
+              "latency_ms": 578.3130079507828,
+              "recall_at_10": 0.994140625,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 32,
+              "qps": 7353.630313966664,
+              "latency_ms": 34.81273725628853,
+              "recall_at_10": 0.9789062500000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 907.4457419177456,
+              "latency_ms": 282.1105308830738,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 385.53563810970707,
+              "latency_ms": 664.0112474560738,
+              "recall_at_10": 0.95625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2278.7746815859014,
+              "latency_ms": 112.34107613563538,
+              "recall_at_10": 0.9257812500000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 96,
+              "qps": 20699.55284046897,
+              "latency_ms": 12.36741691827774,
+              "recall_at_10": 0.9984375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.27289435952115,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 934.7450246257495,
+              "latency_ms": 273.8714764515559,
+              "recall_at_10": 0.9984375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 31490.09339229981,
+              "latency_ms": 8.129540830850601,
+              "recall_at_10": 0.9984375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 1141.5834846342584,
+              "latency_ms": 224.24991553028426,
+              "recall_at_10": 0.998046875,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 64,
+              "qps": 439.0446650293913,
+              "latency_ms": 583.0841834346453,
+              "recall_at_10": 0.994140625,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 3868.2175569216884,
+              "latency_ms": 66.18035212159157,
+              "recall_at_10": 0.992578125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 894.2502709870926,
+              "latency_ms": 286.2733267247677,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 360.7349304499386,
+              "latency_ms": 709.6623542408148,
+              "recall_at_10": 0.95625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2327.773250666945,
+              "latency_ms": 109.97634753584862,
+              "recall_at_10": 0.9257812500000001
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 32,
+              "qps": 19477.781933119953,
+              "latency_ms": 13.143180310726166,
+              "recall_at_10": 0.9734375000000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 83.013556763784,
+              "r1_q": 4,
+              "r2_q": 252,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 32,
+              "qps": 5493.765682554019,
+              "latency_ms": 46.598274260759354,
+              "recall_at_10": 0.9734375000000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 32,
+              "qps": 37198.51716660765,
+              "latency_ms": 6.881994754076004,
+              "recall_at_10": 0.9734375000000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 64,
+              "qps": 1250.0464630091662,
+              "latency_ms": 204.79238778352737,
+              "recall_at_10": 0.983984375,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 420.66992217251305,
+              "latency_ms": 608.5531351466974,
+              "recall_at_10": 0.95234375,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 591.3256626372088,
+              "latency_ms": 432.925570756197,
+              "recall_at_10": 0.899609375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 30.741989612131036,
+              "latency_ms": 8327.372536063194,
+              "recall_at_10": 0.996484375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 394.0617459126138,
+              "latency_ms": 649.6443835397562,
+              "recall_at_10": 0.9195312500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2091.9777259907196,
+              "latency_ms": 122.37223982810974,
+              "recall_at_10": 0.837109375
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 20587.93771825792,
+              "latency_ms": 12.434465438127518,
+              "recall_at_10": 0.998828125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.85326969347236,
+              "r1_q": 1,
+              "r2_q": 255,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 1694.628609546967,
+              "latency_ms": 151.06554826100668,
+              "recall_at_10": 0.998828125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 30207.802752447635,
+              "latency_ms": 8.474631607532501,
+              "recall_at_10": 0.998828125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 1192.375159755977,
+              "latency_ms": 214.69752863049507,
+              "recall_at_10": 1.0,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 420.635243726008,
+              "latency_ms": 608.6033061146736,
+              "recall_at_10": 0.9515625,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 591.3508712023435,
+              "latency_ms": 432.9071156680584,
+              "recall_at_10": 0.899609375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 26.130228555480407,
+              "latency_ms": 9797.08231240511,
+              "recall_at_10": 0.999609375
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 400.8425344298283,
+              "latency_ms": 638.6547784010569,
+              "recall_at_10": 0.9195312500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2112.8166189419203,
+              "latency_ms": 121.16527184844017,
+              "recall_at_10": 0.837109375
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 48,
+              "qps": 31361.864055324357,
+              "latency_ms": 8.162780106067657,
+              "recall_at_10": 0.981640625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 91.4116566087968,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 4307.958843383649,
+              "latency_ms": 59.424894551436104,
+              "recall_at_10": 0.981640625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 72931.56642320583,
+              "latency_ms": 3.5101398825645447,
+              "recall_at_10": 0.981640625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 64,
+              "qps": 1137.962726778169,
+              "latency_ms": 224.96343155701956,
+              "recall_at_10": 0.9871093750000001,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 410.10025378070617,
+              "latency_ms": 624.2376044392586,
+              "recall_at_10": 0.9585937499999999,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 1975.776506234137,
+              "latency_ms": 129.56931069493294,
+              "recall_at_10": 0.9144531250000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 40.0523608266935,
+              "latency_ms": 6391.633220016956,
+              "recall_at_10": 0.99296875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 394.46021075329946,
+              "latency_ms": 648.9881438513597,
+              "recall_at_10": 0.9378906250000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2126.468425076353,
+              "latency_ms": 120.38739770650864,
+              "recall_at_10": 0.8546875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 96,
+              "qps": 27066.69357181614,
+              "latency_ms": 9.458118677139282,
+              "recall_at_10": 0.9953125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.44326712326965,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 2258.0879475872503,
+              "latency_ms": 113.37025215228398,
+              "recall_at_10": 0.9953125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 52895.83561893525,
+              "latency_ms": 4.83970046043396,
+              "recall_at_10": 0.9953125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 1128.2001634085825,
+              "latency_ms": 226.91008945306143,
+              "recall_at_10": 0.996875,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 408.64241483912264,
+              "latency_ms": 626.4645829796791,
+              "recall_at_10": 0.9578125,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 1975.3365265500818,
+              "latency_ms": 129.59817051887512,
+              "recall_at_10": 0.9144531250000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 39.71386915833071,
+              "latency_ms": 6446.110777556896,
+              "recall_at_10": 0.99296875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 401.05055777227466,
+              "latency_ms": 638.3235106865565,
+              "recall_at_10": 0.9378906250000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2148.0354917430504,
+              "latency_ms": 119.1786639392376,
+              "recall_at_10": 0.8546875
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 32,
+              "qps": 12845.356494629546,
+              "latency_ms": 19.92938071489334,
+              "recall_at_10": 0.9703125000000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.40413278508531,
+              "r1_q": 79,
+              "r2_q": 164,
+              "r3_q": 13
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 32,
+              "qps": 1586.053271085141,
+              "latency_ms": 161.40693674484888,
+              "recall_at_10": 0.930859375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 32,
+              "qps": 22279.59927799543,
+              "latency_ms": 11.490332335233688,
+              "recall_at_10": 0.9703125000000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 64,
+              "qps": 1056.8172047050007,
+              "latency_ms": 242.2367831071218,
+              "recall_at_10": 0.962109375,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 418.55148106085,
+              "latency_ms": 611.633243660132,
+              "recall_at_10": 0.9332031249999999,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 1921.605040549335,
+              "latency_ms": 133.22196528315544,
+              "recall_at_10": 0.763671875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 51.40294299722902,
+              "latency_ms": 4980.259593576193,
+              "recall_at_10": 0.98828125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 427.8530820690389,
+              "latency_ms": 598.3362297217051,
+              "recall_at_10": 0.791015625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1671.8112004758957,
+              "latency_ms": 153.12733873724937,
+              "recall_at_10": 0.763671875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 8516.220317982621,
+              "latency_ms": 30.060283839702606,
+              "recall_at_10": 0.999609375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.86613375775178,
+              "r1_q": 78,
+              "r2_q": 164,
+              "r3_q": 14
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 341.1632673524408,
+              "latency_ms": 750.3738664090633,
+              "recall_at_10": 0.9906250000000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 8061.007172802611,
+              "latency_ms": 31.757818162441254,
+              "recall_at_10": 0.999609375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 999.2211347736182,
+              "latency_ms": 256.19954491655034,
+              "recall_at_10": 0.98515625,
+              "peak_vram_gib": 3.1722
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 395.37181662253926,
+              "latency_ms": 647.4917766948541,
+              "recall_at_10": 0.9546875,
+              "peak_vram_gib": 3.1722
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 1921.7501330511689,
+              "latency_ms": 133.2119069993496,
+              "recall_at_10": 0.763671875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "RECALL_MISS",
+              "param": 20,
+              "qps": 51.770601413583684,
+              "latency_ms": 4944.89136710763,
+              "recall_at_10": 0.98828125
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 443.29375645233205,
+              "latency_ms": 577.4951626857122,
+              "recall_at_10": 0.791015625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 1715.9541990557984,
+              "latency_ms": 149.18813109397888,
+              "recall_at_10": 0.763671875
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "sift1m": {
+      "N": 1000000,
+      "D": 128,
+      "nlist": 1024,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.014076322317123413,
+          "layout_time_s": 1.4863866679370403,
+          "encode_time_s": 0.9435045942664146,
+          "total_build_s": 2.4441018104553223,
+          "vram_headers_mb": 0.968505859375,
+          "vram_slap_cols_mb": 7.748046875,
+          "vram_sketch_mb": 92.9765625,
+          "vram_cluster_meta_mb": 1.5039100646972656,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 103.19702529907227,
+          "total_gpu_vram_gib": 0.10077834501862526,
+          "host_pinned_gib": 0.4918193817138672
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.012422297149896622,
+          "layout_time_s": 0.09689290449023247,
+          "encode_time_s": 0.9361160919070244,
+          "total_build_s": 1.0455662570893764,
+          "vram_headers_mb": 0.968505859375,
+          "vram_slap_cols_mb": 7.748046875,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 1.5039100646972656,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 10.220462799072266,
+          "total_gpu_vram_gib": 0.00998092070221901,
+          "host_pinned_gib": 0.4918193817138672
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.011801794171333313,
+          "layout_time_s": 0.0923849530518055,
+          "encode_time_s": 0.5928300283849239,
+          "total_build_s": 0.697159506380558,
+          "vram_headers_mb": 0.968505859375,
+          "vram_slap_cols_mb": 7.748046875,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 1.5039100646972656,
+          "vram_exact_vecs_mb": 503.623046875,
+          "total_gpu_vram_mb": 513.8435096740723,
+          "total_gpu_vram_gib": 0.5018003024160862,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "total_build_s": 0.7983215562999249,
+          "total_gpu_vram_gib": 0.5483627319335938
+        },
+        "B2b_cuVS_CAGRA": {
+          "total_build_s": 8.654318269342184,
+          "total_gpu_vram_gib": 0.7390975952148438
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 12.206521354615688,
+          "total_gpu_vram_gib": 0.49173831939697266
+        },
+        "B4_VecFlow_LabelGPU": {
+          "total_build_s": 9.881776325404644,
+          "total_gpu_vram_gib": 1.0222196578979492
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 7.717329032719135,
+          "host_ram_gib": 0.7152557373046875,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 22.990186344832182,
+          "host_ram_gib": 0.5736947059631348
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 48,
+              "qps": 59323.60282096584,
+              "latency_ms": 4.315314441919327,
+              "recall_at_10": 0.95234375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 94.1279402520149,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 9154.520170137894,
+              "latency_ms": 27.964327484369278,
+              "recall_at_10": 0.95234375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 81149.84818060939,
+              "latency_ms": 3.154657781124115,
+              "recall_at_10": 0.95234375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 64,
+              "qps": 1401.350861998782,
+              "latency_ms": 182.68087382117906,
+              "recall_at_10": 0.978125,
+              "peak_vram_gib": 1.0024
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 64,
+              "qps": 451.62584561619417,
+              "latency_ms": 566.840898245573,
+              "recall_at_10": 0.991015625,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 17969.625227956054,
+              "latency_ms": 14.246262609958649,
+              "recall_at_10": 0.976953125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 1815.4160305309229,
+              "latency_ms": 141.01450890302658,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 408.98270498439786,
+              "latency_ms": 625.9433391193548,
+              "recall_at_10": 0.9710937500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 4312.807764418488,
+              "latency_ms": 59.358082711696625,
+              "recall_at_10": 0.93671875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 96,
+              "qps": 50300.54418693441,
+              "latency_ms": 5.0894081592559814,
+              "recall_at_10": 0.9929687500000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.95242166894865,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 4719.37304125985,
+              "latency_ms": 54.24449344476064,
+              "recall_at_10": 0.9929687500000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 68171.27064597335,
+              "latency_ms": 3.7552475929260254,
+              "recall_at_10": 0.9929687500000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 1399.2907437508882,
+              "latency_ms": 182.9498273630937,
+              "recall_at_10": 0.9984375,
+              "peak_vram_gib": 1.0024
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 64,
+              "qps": 451.4999968791599,
+              "latency_ms": 566.9988964994749,
+              "recall_at_10": 0.991015625,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 64,
+              "qps": 18243.448551994887,
+              "latency_ms": 14.032434672117233,
+              "recall_at_10": 0.976953125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 1830.0831241695555,
+              "latency_ms": 139.8843564093113,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 395.874749022504,
+              "latency_ms": 646.6691816846529,
+              "recall_at_10": 0.9710937500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 4465.298333583718,
+              "latency_ms": 57.33099579811096,
+              "recall_at_10": 0.93671875
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 64,
+              "qps": 68012.7965744726,
+              "latency_ms": 3.7639975547790527,
+              "recall_at_10": 0.9515625000000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 91.5329124233758,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 17160.253584132206,
+              "latency_ms": 14.918194462855658,
+              "recall_at_10": 0.9515625000000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 90566.48600149347,
+              "latency_ms": 2.8266526758670807,
+              "recall_at_10": 0.9515625000000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 1420.9926072048554,
+              "latency_ms": 180.15575781464577,
+              "recall_at_10": 0.9753906250000001,
+              "peak_vram_gib": 1.0024
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 442.62108851943407,
+              "latency_ms": 578.3728038271269,
+              "recall_at_10": 0.877734375,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 4181.354408688278,
+              "latency_ms": 61.224181205034256,
+              "recall_at_10": 0.695703125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 18.397233467216722,
+              "latency_ms": 13915.135689079762,
+              "recall_at_10": 0.9800781250000001
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 422.2404388125802,
+              "latency_ms": 606.2896313766638,
+              "recall_at_10": 0.8714843750000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3210.0270918633414,
+              "latency_ms": 79.75010573863983,
+              "recall_at_10": 0.7703125000000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 52969.74021659486,
+              "latency_ms": 4.832947999238968,
+              "recall_at_10": 0.994921875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.38879496974683,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 7412.8577243655145,
+              "latency_ms": 34.534589697917305,
+              "recall_at_10": 0.994921875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 70901.70354814554,
+              "latency_ms": 3.6106325685977936,
+              "recall_at_10": 0.994921875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 1410.206543394505,
+              "latency_ms": 181.5336917837461,
+              "recall_at_10": 0.9976562499999999,
+              "peak_vram_gib": 1.0024
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 431.88809488112366,
+              "latency_ms": 592.7461373309294,
+              "recall_at_10": 0.875,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 4176.264038160843,
+              "latency_ms": 61.298806220293045,
+              "recall_at_10": 0.695703125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 14.96310355069125,
+              "latency_ms": 17108.750142157078,
+              "recall_at_10": 0.9953124999999999
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 453.902898373716,
+              "latency_ms": 563.9972798526287,
+              "recall_at_10": 0.8714843750000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3149.1549452397103,
+              "latency_ms": 81.29164949059486,
+              "recall_at_10": 0.7703125000000001
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 64,
+              "qps": 65079.63768018494,
+              "latency_ms": 3.9336420595645905,
+              "recall_at_10": 0.955078125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 91.37828116629679,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 17285.415370704806,
+              "latency_ms": 14.810173461834589,
+              "recall_at_10": 0.955078125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 90748.08411534602,
+              "latency_ms": 2.820996195077896,
+              "recall_at_10": 0.955078125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 64,
+              "qps": 1307.068757925821,
+              "latency_ms": 195.8580973247687,
+              "recall_at_10": 0.95859375,
+              "peak_vram_gib": 1.0186
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 419.2651701827184,
+              "latency_ms": 610.5920982857546,
+              "recall_at_10": 0.978515625,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 4175.53473689161,
+              "latency_ms": 61.309512704610825,
+              "recall_at_10": 0.821484375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 39.492918544817464,
+              "latency_ms": 6482.174765318632,
+              "recall_at_10": 0.98359375
+            },
+            "B5_ACORN_48T": {
+              "status": "OK",
+              "param": 1024,
+              "qps": 397.51449624988123,
+              "latency_ms": 644.0016714235147,
+              "recall_at_10": 0.96484375
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3524.0553086025707,
+              "latency_ms": 72.64358177781105,
+              "recall_at_10": 0.844921875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 54120.19652900406,
+              "latency_ms": 4.730211943387985,
+              "recall_at_10": 0.996875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.57633769159101,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 7307.733133846107,
+              "latency_ms": 35.03138323624929,
+              "recall_at_10": 0.996875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 67218.4747511127,
+              "latency_ms": 3.8084767758846283,
+              "recall_at_10": 0.996875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 1251.7699172783023,
+              "latency_ms": 204.51042676965395,
+              "recall_at_10": 0.999609375,
+              "peak_vram_gib": 1.0186
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 427.7916625459381,
+              "latency_ms": 598.4221349159876,
+              "recall_at_10": 0.979296875,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 4177.135524279482,
+              "latency_ms": 61.286017298698425,
+              "recall_at_10": 0.821484375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 30.85991187401865,
+              "latency_ms": 8295.551881194115,
+              "recall_at_10": 0.998046875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 407.6460914494887,
+              "latency_ms": 627.9957182705402,
+              "recall_at_10": 0.96484375
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3546.9317947487666,
+              "latency_ms": 72.1750557422638,
+              "recall_at_10": 0.844921875
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 48,
+              "qps": 32046.60182931902,
+              "latency_ms": 7.988366484642029,
+              "recall_at_10": 0.9605468749999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 95.39808690571606,
+              "r1_q": 97,
+              "r2_q": 149,
+              "r3_q": 10
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 48,
+              "qps": 7726.7671331946485,
+              "latency_ms": 33.131579558054604,
+              "recall_at_10": 0.884375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 48,
+              "qps": 36279.07943774601,
+              "latency_ms": 7.056408375501633,
+              "recall_at_10": 0.9605468749999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 1186.8886346165452,
+              "latency_ms": 215.68999191125235,
+              "recall_at_10": 0.9921875,
+              "peak_vram_gib": 1.0186
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 415.41543668072364,
+              "latency_ms": 616.2505708634853,
+              "recall_at_10": 0.9371093749999999,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 3464.7139857834727,
+              "latency_ms": 73.88777285814285,
+              "recall_at_10": 0.7171875000000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 31.586912450600114,
+              "latency_ms": 8104.622457176447,
+              "recall_at_10": 0.9800781249999999
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 530.7897259871407,
+              "latency_ms": 482.3002169529597,
+              "recall_at_10": 0.815625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3238.177838952202,
+              "latency_ms": 79.05680686235428,
+              "recall_at_10": 0.766796875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 27491.276588271394,
+              "latency_ms": 9.312044829130173,
+              "recall_at_10": 0.9953125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.95743115584611,
+              "r1_q": 97,
+              "r2_q": 149,
+              "r3_q": 10
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 128,
+              "qps": 3061.9484627493666,
+              "latency_ms": 83.60689381758372,
+              "recall_at_10": 0.9773437500000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 23715.579271928935,
+              "latency_ms": 10.794591903686523,
+              "recall_at_10": 0.9953125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 433.4020531998386,
+              "latency_ms": 590.6755588948727,
+              "recall_at_10": 0.996875,
+              "peak_vram_gib": 1.0186
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 421.26770038297565,
+              "latency_ms": 607.6895991961161,
+              "recall_at_10": 0.9359375000000001,
+              "peak_vram_gib": 1.0186
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 3458.095794310574,
+              "latency_ms": 74.02918115258217,
+              "recall_at_10": 0.7171875000000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "RECALL_MISS",
+              "param": 20,
+              "qps": 31.37530965764816,
+              "latency_ms": 8159.282021224499,
+              "recall_at_10": 0.9800781249999999
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 511.3361026584193,
+              "latency_ms": 500.64917902151745,
+              "recall_at_10": 0.815625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3189.1518232995954,
+              "latency_ms": 80.272126942873,
+              "recall_at_10": 0.766796875
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "deep10m": {
+      "N": 10000000,
+      "D": 96,
+      "nlist": 4096,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.12439850345253944,
+          "layout_time_s": 5.766882583498955,
+          "encode_time_s": 6.329240679740906,
+          "total_build_s": 12.22065381333232,
+          "vram_headers_mb": 9.59716796875,
+          "vram_slap_cols_mb": 76.77734375,
+          "vram_sketch_mb": 690.99609375,
+          "vram_cluster_meta_mb": 4.515628814697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 781.8862342834473,
+          "total_gpu_vram_gib": 0.763560775667429,
+          "host_pinned_gib": 3.6739158630371094
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.12385344132781029,
+          "layout_time_s": 1.4924108684062958,
+          "encode_time_s": 5.81299876794219,
+          "total_build_s": 7.42949378117919,
+          "vram_headers_mb": 9.59716796875,
+          "vram_slap_cols_mb": 76.77734375,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 4.515628814697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 90.89014053344727,
+          "total_gpu_vram_gib": 0.0887599028646946,
+          "host_pinned_gib": 3.6739158630371094
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.12245550006628036,
+          "layout_time_s": 1.4935202486813068,
+          "encode_time_s": 7.309968609362841,
+          "total_build_s": 8.926109332591295,
+          "vram_headers_mb": 9.59716796875,
+          "vram_slap_cols_mb": 76.77734375,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 4.515628814697266,
+          "vram_exact_vecs_mb": 3762.08984375,
+          "total_gpu_vram_mb": 3852.9799842834473,
+          "total_gpu_vram_gib": 3.762675765901804,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "total_build_s": 7.885645266622305,
+          "total_gpu_vram_gib": 4.112720489501953
+        },
+        "B2b_cuVS_CAGRA": {
+          "total_build_s": 84.585793081671,
+          "total_gpu_vram_gib": 5.543231964111328
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 279.9363812915981,
+          "total_gpu_vram_gib": 3.725290298461914
+        },
+        "B4_VecFlow_LabelGPU": {
+          "total_build_s": 39.990552358329296,
+          "total_gpu_vram_gib": 7.778406143188476
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 89.9814905077219,
+          "host_ram_gib": 5.9604644775390625,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 564.6649247743189,
+          "host_ram_gib": 4.544854164123535
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 80,
+              "qps": 34577.77196691457,
+              "latency_ms": 7.403600215911865,
+              "recall_at_10": 0.970703125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.93591696366417,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 2947.1000828713813,
+              "latency_ms": 86.86505133907,
+              "recall_at_10": 0.970703125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 30820.997770125094,
+              "latency_ms": 8.306025713682175,
+              "recall_at_10": 0.970703125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 64,
+              "qps": 801.2355561743215,
+              "latency_ms": 319.50653965274495,
+              "recall_at_10": 0.96171875,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 64,
+              "qps": 387.21153874529466,
+              "latency_ms": 661.137322584788,
+              "recall_at_10": 0.98359375,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 9024.530011846755,
+              "latency_ms": 28.36712822318077,
+              "recall_at_10": 0.964453125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 448.21279030331465,
+              "latency_ms": 571.1572840809822,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 265.10328240457665,
+              "latency_ms": 965.6613742311796,
+              "recall_at_10": 0.694140625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3401.4144456082863,
+              "latency_ms": 75.26280730962753,
+              "recall_at_10": 0.8734375000000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 256,
+              "qps": 19588.631260193106,
+              "latency_ms": 13.068804889917374,
+              "recall_at_10": 0.997265625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.29284375787253,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 1017.0868247100856,
+              "latency_ms": 251.69925888379416,
+              "recall_at_10": 0.997265625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 15365.936512887025,
+              "latency_ms": 16.66022762656212,
+              "recall_at_10": 0.997265625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 256,
+              "qps": 767.16306819694,
+              "latency_ms": 333.696981271108,
+              "recall_at_10": 0.99609375,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 128,
+              "qps": 382.68401529671826,
+              "latency_ms": 668.9592190086842,
+              "recall_at_10": 0.9937500000000001,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 2649.5368513399944,
+              "latency_ms": 96.62066027522087,
+              "recall_at_10": 0.996875
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 447.80582199310646,
+              "latency_ms": 571.676354855299,
+              "recall_at_10": 1.0
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 267.12609154997085,
+              "latency_ms": 958.3489149808884,
+              "recall_at_10": 0.694140625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3313.742629120854,
+              "latency_ms": 77.2540383040905,
+              "recall_at_10": 0.8734375000000001
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 38131.754391455404,
+              "latency_ms": 6.713564693927765,
+              "recall_at_10": 0.966796875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.70311538683605,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 4679.43111085447,
+              "latency_ms": 54.70750480890274,
+              "recall_at_10": 0.966796875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 30714.001720748063,
+              "latency_ms": 8.334960788488388,
+              "recall_at_10": 0.966796875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 812.7264878153588,
+              "latency_ms": 314.9891185263793,
+              "recall_at_10": 0.96875,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 373.1801139404893,
+              "latency_ms": 685.9958246350288,
+              "recall_at_10": 0.90546875,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 1250.9514272723577,
+              "latency_ms": 204.64423671364784,
+              "recall_at_10": 0.7933593750000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 5.920058100885027,
+              "latency_ms": 43242.81884357333,
+              "recall_at_10": 0.9730468750000001
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 249.75657387332046,
+              "latency_ms": 1024.9980452160041,
+              "recall_at_10": 0.666796875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2890.692774857781,
+              "latency_ms": 88.5600857436657,
+              "recall_at_10": 0.7386718750000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 16521.97091110804,
+              "latency_ms": 15.494519472122192,
+              "recall_at_10": 0.9953124999999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.36145594247054,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 1336.4295107119667,
+              "latency_ms": 191.5551833808422,
+              "recall_at_10": 0.9953124999999999
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 13946.835188149355,
+              "latency_ms": 18.355418741703033,
+              "recall_at_10": 0.9953124999999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 788.3880109133372,
+              "latency_ms": 324.71320778131485,
+              "recall_at_10": 0.98984375,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 373.14831131302003,
+              "latency_ms": 686.0542905827364,
+              "recall_at_10": 0.90625,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 1253.7584850512153,
+              "latency_ms": 204.18605580925941,
+              "recall_at_10": 0.7933593750000001
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 4.266809455828681,
+              "latency_ms": 59997.99209460616,
+              "recall_at_10": 0.9921875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 230.28435693171113,
+              "latency_ms": 1111.66908343633,
+              "recall_at_10": 0.666796875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2900.705247184433,
+              "latency_ms": 88.2543995976448,
+              "recall_at_10": 0.7386718750000001
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 96,
+              "qps": 39948.51110207341,
+              "latency_ms": 6.408248841762543,
+              "recall_at_10": 0.95703125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 96.98184907046425,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 6095.979653892029,
+              "latency_ms": 41.99489081899325,
+              "recall_at_10": 0.95703125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 35541.19522556884,
+              "latency_ms": 7.202909141778946,
+              "recall_at_10": 0.95703125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 424.2199967001293,
+              "latency_ms": 603.4604733188947,
+              "recall_at_10": 0.9789062500000001,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 256,
+              "qps": 263.1737502222125,
+              "latency_ms": 972.7413915097713,
+              "recall_at_10": 0.9484375,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 1253.0731339493775,
+              "latency_ms": 204.2977325618267,
+              "recall_at_10": 0.865625
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 11.674665965530814,
+              "latency_ms": 21927.82223969698,
+              "recall_at_10": 0.9765625
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 221.0060114242925,
+              "latency_ms": 1158.3395327130954,
+              "recall_at_10": 0.7203125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3031.273244412073,
+              "latency_ms": 84.45296064019203,
+              "recall_at_10": 0.78671875
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 256,
+              "qps": 24162.61986677547,
+              "latency_ms": 10.59487760066986,
+              "recall_at_10": 0.99296875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.79072789528112,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 2506.6896964821412,
+              "latency_ms": 102.12672129273415,
+              "recall_at_10": 0.99296875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 20262.395519310987,
+              "latency_ms": 12.634241580963135,
+              "recall_at_10": 0.99296875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 266.7721614463066,
+              "latency_ms": 959.6203689773878,
+              "recall_at_10": 0.99921875,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 266.6165099909853,
+              "latency_ms": 960.1805980006853,
+              "recall_at_10": 0.970703125,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 1252.5932082355278,
+              "latency_ms": 204.376008361578,
+              "recall_at_10": 0.865625
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "RECALL_MISS",
+              "param": 20,
+              "qps": 11.81023393793273,
+              "latency_ms": 21676.115930080414,
+              "recall_at_10": 0.9765625
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 253.73963506652973,
+              "latency_ms": 1008.9082059760889,
+              "recall_at_10": 0.7203125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2932.3226444835964,
+              "latency_ms": 87.3028077185154,
+              "recall_at_10": 0.78671875
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 64,
+              "qps": 10206.561879490302,
+              "latency_ms": 25.081903487443924,
+              "recall_at_10": 0.96953125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.61809489681312,
+              "r1_q": 94,
+              "r2_q": 156,
+              "r3_q": 6
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 64,
+              "qps": 2296.190698084711,
+              "latency_ms": 111.48899793624878,
+              "recall_at_10": 0.9164062500000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 64,
+              "qps": 7957.274199682832,
+              "latency_ms": 32.17182084918022,
+              "recall_at_10": 0.96953125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 128,
+              "qps": 419.7735054000803,
+              "latency_ms": 609.8526865243912,
+              "recall_at_10": 0.973828125,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OK",
+              "param": 512,
+              "qps": 265.52431996026195,
+              "latency_ms": 964.1301408410072,
+              "recall_at_10": 0.955859375,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 1180.4384255215755,
+              "latency_ms": 216.8685756623745,
+              "recall_at_10": 0.7574218749999999
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 20,
+              "qps": 9.089289533596316,
+              "latency_ms": 28165.017634630203,
+              "recall_at_10": 0.9875
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 276.5731187298481,
+              "latency_ms": 925.6141781806946,
+              "recall_at_10": 0.5515625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2759.2606175627234,
+              "latency_ms": 92.77847781777382,
+              "recall_at_10": 0.73828125
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 192,
+              "qps": 8652.423693780034,
+              "latency_ms": 29.58708554506302,
+              "recall_at_10": 0.9953125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.32400303801295,
+              "r1_q": 94,
+              "r2_q": 156,
+              "r3_q": 6
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 192,
+              "qps": 869.7812362786441,
+              "latency_ms": 294.32688280940056,
+              "recall_at_10": 0.977734375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 192,
+              "qps": 5401.846918730669,
+              "latency_ms": 47.391198575496674,
+              "recall_at_10": 0.9953125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OK",
+              "param": 512,
+              "qps": 251.01066710314802,
+              "latency_ms": 1019.8769755661488,
+              "recall_at_10": 0.994921875,
+              "peak_vram_gib": 7.4958
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 264.47237092509886,
+              "latency_ms": 967.9650055865446,
+              "recall_at_10": 0.95703125,
+              "peak_vram_gib": 7.4958
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 1183.6525238232123,
+              "latency_ms": 216.27968922257423,
+              "recall_at_10": 0.7574218749999999
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OK",
+              "param": 35,
+              "qps": 6.556771616036761,
+              "latency_ms": 39043.60483959317,
+              "recall_at_10": 0.997265625
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 269.28431976906387,
+              "latency_ms": 950.6680530806383,
+              "recall_at_10": 0.5515625
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2746.4679715712823,
+              "latency_ms": 93.2106263935566,
+              "recall_at_10": 0.73828125
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "sift10m": {
+      "N": 10000000,
+      "D": 128,
+      "nlist": 4096,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.12216651439666748,
+          "layout_time_s": 7.104838527739048,
+          "encode_time_s": 10.780277986079454,
+          "total_build_s": 18.007456954568624,
+          "vram_headers_mb": 9.597381591796875,
+          "vram_slap_cols_mb": 76.779052734375,
+          "vram_sketch_mb": 921.3486328125,
+          "vram_cluster_meta_mb": 6.015628814697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 1013.7406959533691,
+          "total_gpu_vram_gib": 0.989981148391962,
+          "host_pinned_gib": 4.873670339584351
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.09830468893051147,
+          "layout_time_s": 1.4486801624298096,
+          "encode_time_s": 10.422012604773045,
+          "total_build_s": 11.969138734042645,
+          "vram_headers_mb": 9.597381591796875,
+          "vram_slap_cols_mb": 76.779052734375,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 6.015628814697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 92.39206314086914,
+          "total_gpu_vram_gib": 0.09022662416100502,
+          "host_pinned_gib": 4.873670339584351
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.1195085197687149,
+          "layout_time_s": 1.4563880898058414,
+          "encode_time_s": 5.924798887223005,
+          "total_build_s": 7.500838361680508,
+          "vram_headers_mb": 9.597381591796875,
+          "vram_slap_cols_mb": 76.779052734375,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 6.015628814697266,
+          "vram_exact_vecs_mb": 4990.638427734375,
+          "total_gpu_vram_mb": 5083.030490875244,
+          "total_gpu_vram_gib": 4.963896963745356,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "status": "OOM",
+          "error": "CUDA out of memory. Tried to allocate 612.00 MiB. GPU 0 has a total capacity of 15.57 GiB of which 387.38 MiB is free. I"
+        },
+        "B2b_cuVS_CAGRA": {
+          "status": "OOM",
+          "error": "cuVS cagra requires est. 12.35 GiB > 9.85 GiB"
+        },
+        "B3_Faiss_PostFilter": {
+          "total_build_s": 330.50740249827504,
+          "total_gpu_vram_gib": 6.109476089477539
+        },
+        "B4_VecFlow_LabelGPU": {
+          "status": "OOM",
+          "error": "CUDA out of memory. Tried to allocate 2.84 GiB. GPU 0 has a total capacity of 15.57 GiB of which 2.27 GiB is free. Inclu"
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 91.82560468837619,
+          "host_ram_gib": 7.152557373046875,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 1.377603441476822,
+          "host_ram_gib": 5.736947059631348
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 80,
+              "qps": 30865.531767036402,
+              "latency_ms": 8.294041454792023,
+              "recall_at_10": 0.96484375,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.7958803185903,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 2270.5494629243963,
+              "latency_ms": 112.74803926547368,
+              "recall_at_10": 0.96484375
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 80,
+              "qps": 37789.90540793502,
+              "latency_ms": 6.77429586648941,
+              "recall_at_10": 0.96484375
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 3763.133514606184,
+              "latency_ms": 68.02841275930405,
+              "recall_at_10": 0.98984375
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 272.9120327844721,
+              "latency_ms": 938.0311941107115,
+              "recall_at_10": 0.6976562500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3290.7579535237237,
+              "latency_ms": 77.79362797737122,
+              "recall_at_10": 0.8992187500000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 320,
+              "qps": 14543.974510771004,
+              "latency_ms": 17.60179102420807,
+              "recall_at_10": 0.9976562499999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.40401147048078,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 608.6928245030418,
+              "latency_ms": 420.573382327954,
+              "recall_at_10": 0.9976562499999999
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 14534.002069461385,
+              "latency_ms": 17.613868415355682,
+              "recall_at_10": 0.9976562499999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OK",
+              "param": 256,
+              "qps": 1976.5183897281006,
+              "latency_ms": 129.52067703008652,
+              "recall_at_10": 0.995703125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 272.5314554444071,
+              "latency_ms": 939.341110487779,
+              "recall_at_10": 0.6976562500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 3312.091831626274,
+              "latency_ms": 77.2925429046154,
+              "recall_at_10": 0.8992187500000001
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 160,
+              "qps": 25426.51593472499,
+              "latency_ms": 10.068229585886002,
+              "recall_at_10": 0.963671875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.72299341894096,
+              "r1_q": 1,
+              "r2_q": 255,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 2886.8212819552905,
+              "latency_ms": 88.67885296543439,
+              "recall_at_10": 0.9625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 160,
+              "qps": 30703.764383451475,
+              "latency_ms": 8.33773985505104,
+              "recall_at_10": 0.963671875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 949.2386581934223,
+              "latency_ms": 269.68981698155403,
+              "recall_at_10": 0.7953125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 248.54985524283995,
+              "latency_ms": 1029.9744481841724,
+              "recall_at_10": 0.6585937500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2570.7623141181975,
+              "latency_ms": 99.58135709166527,
+              "recall_at_10": 0.786328125
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 512,
+              "qps": 15370.464965026335,
+              "latency_ms": 16.655319184064865,
+              "recall_at_10": 0.9953125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.37126084275748,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 954.7418014049501,
+              "latency_ms": 268.13532163699466,
+              "recall_at_10": 0.9953125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 512,
+              "qps": 17840.891149952327,
+              "latency_ms": 14.349059015512466,
+              "recall_at_10": 0.9953125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 949.4766493216835,
+              "latency_ms": 269.62221786379814,
+              "recall_at_10": 0.7953125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 250.2453900241569,
+              "latency_ms": 1022.9958680768808,
+              "recall_at_10": 0.6585937500000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2583.054041721001,
+              "latency_ms": 99.10748898983002,
+              "recall_at_10": 0.786328125
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 128,
+              "qps": 32110.15246270671,
+              "latency_ms": 7.9725563526153564,
+              "recall_at_10": 0.9652343750000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.69782328978489,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 3529.529607467813,
+              "latency_ms": 72.5309116144975,
+              "recall_at_10": 0.9652343750000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 128,
+              "qps": 42096.178208838086,
+              "latency_ms": 6.081312149763107,
+              "recall_at_10": 0.9652343750000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 946.7439487108858,
+              "latency_ms": 270.4004608094692,
+              "recall_at_10": 0.886328125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 247.82432776733518,
+              "latency_ms": 1032.989788800478,
+              "recall_at_10": 0.707421875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2840.5160344258948,
+              "latency_ms": 90.1244692504406,
+              "recall_at_10": 0.8308593750000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 384,
+              "qps": 16501.96198487648,
+              "latency_ms": 15.513306856155396,
+              "recall_at_10": 0.99453125,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.19108423003081,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 1236.8534734080956,
+              "latency_ms": 206.97682102521262,
+              "recall_at_10": 0.99453125
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 19298.006835455493,
+              "latency_ms": 13.265618681907654,
+              "recall_at_10": 0.99453125
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 947.544161602626,
+              "latency_ms": 270.1721042394638,
+              "recall_at_10": 0.886328125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 247.1264945557856,
+              "latency_ms": 1035.9067345658939,
+              "recall_at_10": 0.707421875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2921.7342859710875,
+              "latency_ms": 87.61919289827347,
+              "recall_at_10": 0.8308593750000001
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 96,
+              "qps": 9330.119314832746,
+              "latency_ms": 27.438019961118698,
+              "recall_at_10": 0.9808593750000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.16965231836767,
+              "r1_q": 77,
+              "r2_q": 158,
+              "r3_q": 21
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 96,
+              "qps": 1077.9669942356666,
+              "latency_ms": 237.48408009608588,
+              "recall_at_10": 0.938671875
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 96,
+              "qps": 8794.482154500725,
+              "latency_ms": 29.109161347150803,
+              "recall_at_10": 0.9808593750000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 903.2828513638984,
+              "latency_ms": 283.4106720983982,
+              "recall_at_10": 0.792578125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 316.0514700667498,
+              "latency_ms": 809.9946503837904,
+              "recall_at_10": 0.521484375
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2335.1633538040005,
+              "latency_ms": 109.62830483913422,
+              "recall_at_10": 0.7749999999999999
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 384,
+              "qps": 6133.918303655189,
+              "latency_ms": 41.735149919986725,
+              "recall_at_10": 0.996875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.74188902541357,
+              "r1_q": 77,
+              "r2_q": 158,
+              "r3_q": 21
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 384,
+              "qps": 289.88378066060193,
+              "latency_ms": 883.1125336388747,
+              "recall_at_10": 0.9867187500000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 4105.902839283307,
+              "latency_ms": 62.34925910830498,
+              "recall_at_10": 0.996875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "RECALL_MISS",
+              "param": 512,
+              "qps": 905.2766442287997,
+              "latency_ms": 282.7864848077297,
+              "recall_at_10": 0.792578125
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 311.81752890957785,
+              "latency_ms": 820.992972701788,
+              "recall_at_10": 0.521484375
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2378.9299675695233,
+              "latency_ms": 107.61140659451485,
+              "recall_at_10": 0.7749999999999999
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    },
+    "t2i10m": {
+      "N": 10000000,
+      "D": 200,
+      "nlist": 4096,
+      "is_real_tabular": false,
+      "build_and_memory": {
+        "PRISM": {
+          "kmeans_time_s": 0.10721281543374062,
+          "layout_time_s": 9.128889057785273,
+          "encode_time_s": 10.440104316920042,
+          "total_build_s": 19.676362320780754,
+          "vram_headers_mb": 9.597076416015625,
+          "vram_slap_cols_mb": 76.776611328125,
+          "vram_sketch_mb": 1497.1439208984375,
+          "vram_cluster_meta_mb": 10.140628814697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 1593.6582374572754,
+          "total_gpu_vram_gib": 1.5563068725168705,
+          "host_pinned_gib": 7.572693109512329
+        },
+        "B7_HostOffload_PreFilter": {
+          "kmeans_time_s": 0.13060825690627098,
+          "layout_time_s": 1.4663695022463799,
+          "encode_time_s": 11.494954731315374,
+          "total_build_s": 13.092280969023705,
+          "vram_headers_mb": 9.597076416015625,
+          "vram_slap_cols_mb": 76.776611328125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 10.140628814697266,
+          "vram_exact_vecs_mb": 0.0,
+          "total_gpu_vram_mb": 96.51431655883789,
+          "total_gpu_vram_gib": 0.09425226226449013,
+          "host_pinned_gib": 7.572693109512329
+        },
+        "B1_GPU_PreFilter": {
+          "kmeans_time_s": 0.1122329942882061,
+          "layout_time_s": 1.5701734721660614,
+          "encode_time_s": 9.739968575537205,
+          "total_build_s": 11.422558277845383,
+          "vram_headers_mb": 9.597076416015625,
+          "vram_slap_cols_mb": 76.776611328125,
+          "vram_sketch_mb": 0.0,
+          "vram_cluster_meta_mb": 10.140628814697266,
+          "vram_exact_vecs_mb": 7754.437744140625,
+          "total_gpu_vram_mb": 7850.952060699463,
+          "total_gpu_vram_gib": 7.666945371776819,
+          "host_pinned_gib": 0.0
+        },
+        "B2a_cuVS_IVF_Flat": {
+          "status": "OOM",
+          "error": "RAFT failure at file=/__w/cuvs/cuvs/cpp/src/neighbors/ivf_flat/../ivf_list.cuh line=50: ivf::list: failed to allocate a "
+        },
+        "B2b_cuVS_CAGRA": {
+          "status": "OOM",
+          "error": "cuVS cagra requires est. 19.19 GiB > 7.39 GiB"
+        },
+        "B3_Faiss_PostFilter": {
+          "status": "OOM",
+          "error": "Faiss-GPU IVF-Flat requires 9.46 GiB > 4.85 GiB"
+        },
+        "B4_VecFlow_LabelGPU": {
+          "status": "OOM",
+          "error": "VecFlow-Style multi-attribute GPU index requires 20.34 GiB > 4.85 GiB"
+        },
+        "B5_ACORN_48T": {
+          "total_build_s": 113.10219385102391,
+          "host_ram_gib": 9.834766387939453,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "B6_HNSW_Filter_48T": {
+          "total_build_s": 1.31271144002676,
+          "host_ram_gib": 8.419156074523926
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 320,
+              "qps": 9940.749777792462,
+              "latency_ms": 25.752584636211395,
+              "recall_at_10": 0.9722656249999999,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.64969234828361,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 397.5137665555135,
+              "latency_ms": 644.0028535823027,
+              "recall_at_10": 0.9722656249999999
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 11294.393490067136,
+              "latency_ms": 22.666113078594208,
+              "recall_at_10": 0.9722656249999999
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 267.22495617625117,
+              "latency_ms": 957.994356751442,
+              "recall_at_10": 0.601953125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2780.8497193817193,
+              "latency_ms": 92.05819293856621,
+              "recall_at_10": 0.7988281250000001
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 1953.4918470999612,
+              "latency_ms": 131.04738593101501,
+              "recall_at_10": 1.0,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.6031829169848,
+              "r1_q": 256,
+              "r2_q": 0,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 26.925085427036997,
+              "latency_ms": 9507.862127075592,
+              "recall_at_10": 1.0
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 1546.8756975653282,
+              "latency_ms": 165.49487486481667,
+              "recall_at_10": 1.0
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 281.3817604530025,
+              "latency_ms": 909.7959995269775,
+              "recall_at_10": 0.601953125
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2731.768565126443,
+              "latency_ms": 93.71218457818031,
+              "recall_at_10": 0.7988281250000001
+            }
+          }
+        },
+        "W2_correlated": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 384,
+              "qps": 13394.734273113383,
+              "latency_ms": 19.111987948417664,
+              "recall_at_10": 0.9640625,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.07872348478057,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 847.8964902325105,
+              "latency_ms": 301.9236462811629,
+              "recall_at_10": 0.9640625
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 384,
+              "qps": 17156.634811306787,
+              "latency_ms": 14.921341091394424,
+              "recall_at_10": 0.9640625
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 252.06382614255742,
+              "latency_ms": 1015.6157823900381,
+              "recall_at_10": 0.5941406250000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2203.9332662398597,
+              "latency_ms": 116.1559671163559,
+              "recall_at_10": 0.701953125
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 2354.3300380478663,
+              "latency_ms": 108.73581692576408,
+              "recall_at_10": 1.0,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.25779859078247,
+              "r1_q": 256,
+              "r2_q": 0,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 67.43360090997588,
+              "latency_ms": 3796.3270023465157,
+              "recall_at_10": 1.0
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 2966.500586091218,
+              "latency_ms": 86.2969659268856,
+              "recall_at_10": 1.0
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 246.47167091911646,
+              "latency_ms": 1038.6589219172795,
+              "recall_at_10": 0.5941406250000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2275.868972800973,
+              "latency_ms": 112.48450726270676,
+              "recall_at_10": 0.701953125
+            }
+          }
+        },
+        "W3_compound": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 320,
+              "qps": 13482.905663636535,
+              "latency_ms": 18.987005203962326,
+              "recall_at_10": 0.9675781250000001,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 97.9900835077266,
+              "r1_q": 0,
+              "r2_q": 256,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 916.0861708780867,
+              "latency_ms": 279.4496938586235,
+              "recall_at_10": 0.9675781250000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 320,
+              "qps": 19152.876946232238,
+              "latency_ms": 13.366138190031052,
+              "recall_at_10": 0.9675781250000001
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 240.97977714713443,
+              "latency_ms": 1062.3298063874245,
+              "recall_at_10": 0.6312500000000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2480.8365196067903,
+              "latency_ms": 103.19099947810173,
+              "recall_at_10": 0.728515625
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 2406.178264642758,
+              "latency_ms": 106.39278218150139,
+              "recall_at_10": 1.0,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.29673401465848,
+              "r1_q": 256,
+              "r2_q": 0,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 67.44676343682184,
+              "latency_ms": 3795.5861327548823,
+              "recall_at_10": 1.0
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 3309.068543273373,
+              "latency_ms": 77.3631602525711,
+              "recall_at_10": 1.0
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 243.34725743829208,
+              "latency_ms": 1051.994596918424,
+              "recall_at_10": 0.6312500000000001
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2438.699674013069,
+              "latency_ms": 104.97397556900978,
+              "recall_at_10": 0.728515625
+            }
+          }
+        },
+        "W4_mixed": {
+          "R95": {
+            "PRISM": {
+              "status": "OK",
+              "param": 192,
+              "qps": 5116.483130248903,
+              "latency_ms": 50.03436803817749,
+              "recall_at_10": 0.96875,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 98.7144420473116,
+              "r1_q": 82,
+              "r2_q": 161,
+              "r3_q": 13
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "RECALL_MISS",
+              "param": 192,
+              "qps": 370.3375909151488,
+              "latency_ms": 691.2611797451973,
+              "recall_at_10": 0.9312500000000001
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 192,
+              "qps": 4660.541638546879,
+              "latency_ms": 54.92923781275749,
+              "recall_at_10": 0.96875
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 274.5813104363097,
+              "latency_ms": 932.3285681505998,
+              "recall_at_10": 0.45546875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2104.3931082805775,
+              "latency_ms": 121.65027484297752,
+              "recall_at_10": 0.6812499999999999
+            }
+          },
+          "R99": {
+            "PRISM": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 1320.427258928046,
+              "latency_ms": 193.8766397535801,
+              "recall_at_10": 1.0,
+              "ivf_agreement_pct": 100.0,
+              "sketch_prune_pct": 99.7748888033425,
+              "r1_q": 256,
+              "r2_q": 0,
+              "r3_q": 0
+            },
+            "B7_HostOffload_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 15.271834981376923,
+              "latency_ms": 16762.884113937616,
+              "recall_at_10": 1.0
+            },
+            "B1_GPU_PreFilter": {
+              "status": "OK",
+              "param": 4096,
+              "qps": 633.7453803672364,
+              "latency_ms": 403.9477176964283,
+              "recall_at_10": 1.0
+            },
+            "B2a_cuVS_IVF_Flat": {
+              "status": "OOM"
+            },
+            "B2b_cuVS_CAGRA": {
+              "status": "OOM"
+            },
+            "B3_Faiss_PostFilter": {
+              "status": "OOM"
+            },
+            "B4_VecFlow_LabelGPU": {
+              "status": "OOM"
+            },
+            "B5_ACORN_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 272.14653797034873,
+              "latency_ms": 940.6696918110052,
+              "recall_at_10": 0.45546875
+            },
+            "B6_HNSW_Filter_48T": {
+              "status": "RECALL_MISS",
+              "param": 1024,
+              "qps": 2145.535903687434,
+              "latency_ms": 119.31750923395157,
+              "recall_at_10": 0.6812499999999999
+            }
+          }
+        }
+      },
+      "strict_v2_done": true
+    }
+  }
+}

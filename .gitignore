@@ -1,0 +1,30 @@
+# Byte-compiled / Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Compiled CUDA & C++ PyBind11 extensions
+build_ext/
+*.so
+*.o
+
+# Datasets, caches, and third-party builds
+data/
+attr_cache/
+third_party/
+*.npy
+*.npz
+*.u8bin
+*.fbin
+*.ibin
+
+# Generated plots & logs
+figures/generated/
+*.log
+*.tmp
+
+# OS metadata (macOS / ExFAT)
+.DS_Store
+._*
+Thumbs.db

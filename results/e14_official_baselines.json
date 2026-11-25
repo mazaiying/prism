@@ -1,0 +1,1891 @@
+{
+  "n_val": 256,
+  "n_test": 256,
+  "datasets": {
+    "modbench": {
+      "N": 134556,
+      "D": 384,
+      "build": {
+        "PRISM": {
+          "build_s": 1.77,
+          "vram_gib": 0.0375,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 2.003,
+          "vram_gib": 0.0375,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        },
+        "Official_DiskANN": {
+          "build_s": 65.244,
+          "repo": "microsoft/DiskANN C++ 48T (StitchedVamana(R=48,L=128,SR=64))"
+        },
+        "Official_ACORN_1": {
+          "build_s": 1.759,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN_gamma": {
+          "build_s": 9.514,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN": {
+          "build_s": 9.514,
+          "build_s_acorn1": 1.759,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_SeRF_W1_range": {
+          "build_s": 23.205,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        },
+        "Official_SeRF_W2_correlated": {
+          "build_s": 19.68,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 19660.22,
+            "recall10": 0.9699,
+            "latency_ms": 13.021,
+            "knob": 48
+          },
+          "PRISM_A100": {
+            "qps": 17166.67,
+            "recall10": 0.9699,
+            "latency_ms": 14.913,
+            "knob": 48
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 466.03,
+            "recall10": 0.9758,
+            "latency_ms": 549.325,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_ACORN_gamma": {
+            "qps": 3713.36,
+            "recall10": 0.977,
+            "latency_ms": 68.94,
+            "efSearch": 512,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_ACORN": {
+            "qps": 3713.36,
+            "recall10": 0.977,
+            "latency_ms": 68.94,
+            "efSearch": 512,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_SeRF": {
+            "qps": 7477.69,
+            "recall10": 0.9879,
+            "latency_ms": 34.235,
+            "efSearch": 128,
+            "build_s": 23.205
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 38830.15,
+            "recall10": 0.9828,
+            "latency_ms": 6.593,
+            "knob": 192
+          },
+          "PRISM_A100": {
+            "qps": 35397.68,
+            "recall10": 0.9828,
+            "latency_ms": 7.232,
+            "knob": 192
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 1811.3,
+            "recall10": 0.9668,
+            "latency_ms": 141.335,
+            "efSearch": 512,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_ACORN_gamma": {
+            "qps": 2588.71,
+            "recall10": 0.9168,
+            "latency_ms": 98.891,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_ACORN": {
+            "qps": 1811.3,
+            "recall10": 0.9668,
+            "latency_ms": 141.335,
+            "efSearch": 512,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_SeRF": {
+            "qps": 5332.57,
+            "recall10": 0.9617,
+            "latency_ms": 48.007,
+            "efSearch": 800,
+            "build_s": 19.68
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 41266.06,
+            "recall10": 0.9883,
+            "latency_ms": 6.204,
+            "knob": 192
+          },
+          "PRISM_A100": {
+            "qps": 35953.8,
+            "recall10": 0.9883,
+            "latency_ms": 7.12,
+            "knob": 192
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 1665.89,
+            "recall10": 0.9828,
+            "latency_ms": 153.672,
+            "efSearch": 512,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_ACORN_gamma": {
+            "qps": 2031.89,
+            "recall10": 0.9371,
+            "latency_ms": 125.991,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_ACORN": {
+            "qps": 1665.89,
+            "recall10": 0.9828,
+            "latency_ms": 153.672,
+            "efSearch": 512,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 12520.7,
+            "recall10": 0.9715,
+            "latency_ms": 20.446,
+            "knob": 112
+          },
+          "PRISM_A100": {
+            "qps": 9580.92,
+            "recall10": 0.9715,
+            "latency_ms": 26.72,
+            "knob": 112
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 610.95,
+            "recall10": 0.9426,
+            "latency_ms": 419.018,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1833.07,
+            "recall10": 0.7629,
+            "latency_ms": 139.656,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_ACORN": {
+            "qps": 610.95,
+            "recall10": 0.9426,
+            "latency_ms": 419.018,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 26966.26,
+            "recall10": 0.9918,
+            "latency_ms": 9.493,
+            "knob": 320
+          },
+          "PRISM_A100": {
+            "qps": 23576.37,
+            "recall10": 0.9918,
+            "latency_ms": 10.858,
+            "knob": 320
+          },
+          "Official_DiskANN": {
+            "qps": 20772.13,
+            "recall10": 0.9688,
+            "latency_ms": 12.324,
+            "L_search": 192,
+            "build_s": 65.244,
+            "variant": "StitchedVamana(R=48,L=128,SR=64)"
+          },
+          "Official_ACORN_1": {
+            "qps": 3069.94,
+            "recall10": 0.9684,
+            "latency_ms": 83.389,
+            "efSearch": 256,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_ACORN_gamma": {
+            "qps": 2598.2,
+            "recall10": 0.766,
+            "latency_ms": 98.53,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_ACORN": {
+            "qps": 3069.94,
+            "recall10": 0.9684,
+            "latency_ms": 83.389,
+            "efSearch": 256,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 23598.52,
+            "recall10": 1.0,
+            "latency_ms": 10.848,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 25544.49,
+            "recall10": 1.0,
+            "latency_ms": 10.022,
+            "knob": 16
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 2693.83,
+            "recall10": 0.6888,
+            "latency_ms": 95.032,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_ACORN_gamma": {
+            "qps": 15351.83,
+            "recall10": 0.2477,
+            "latency_ms": 16.676,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 9.514
+          },
+          "Official_ACORN": {
+            "qps": 2693.83,
+            "recall10": 0.6888,
+            "latency_ms": 95.032,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 1.759
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        }
+      }
+    },
+    "sift1m": {
+      "N": 1000000,
+      "D": 128,
+      "build": {
+        "PRISM": {
+          "build_s": 2.527,
+          "vram_gib": 0.1008,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 2.494,
+          "vram_gib": 0.1008,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        },
+        "Official_DiskANN": {
+          "build_s": 41.944,
+          "repo": "microsoft/DiskANN C++ 48T (StitchedVamana(R=32,L=100,SR=64))"
+        },
+        "Official_ACORN_1": {
+          "build_s": 7.328,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN_gamma": {
+          "build_s": 73.239,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN": {
+          "build_s": 73.239,
+          "build_s_acorn1": 7.328,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_SeRF_W1_range": {
+          "build_s": 153.166,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        },
+        "Official_SeRF_W2_correlated": {
+          "build_s": 150.496,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 56364.31,
+            "recall10": 0.9566,
+            "latency_ms": 4.542,
+            "knob": 48
+          },
+          "PRISM_A100": {
+            "qps": 52903.77,
+            "recall10": 0.9566,
+            "latency_ms": 4.839,
+            "knob": 48
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 406.37,
+            "recall10": 0.9695,
+            "latency_ms": 629.975,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_ACORN_gamma": {
+            "qps": 5836.9,
+            "recall10": 0.9809,
+            "latency_ms": 43.859,
+            "efSearch": 256,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_ACORN": {
+            "qps": 5836.9,
+            "recall10": 0.9809,
+            "latency_ms": 43.859,
+            "efSearch": 256,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_SeRF": {
+            "qps": 9234.43,
+            "recall10": 0.9473,
+            "latency_ms": 27.722,
+            "efSearch": 64,
+            "build_s": 153.166
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 61750.77,
+            "recall10": 0.966,
+            "latency_ms": 4.146,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 51831.74,
+            "recall10": 0.966,
+            "latency_ms": 4.939,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 292.02,
+            "recall10": 0.8895,
+            "latency_ms": 876.655,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1230.63,
+            "recall10": 0.741,
+            "latency_ms": 208.023,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_ACORN": {
+            "qps": 292.02,
+            "recall10": 0.8895,
+            "latency_ms": 876.655,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_SeRF": {
+            "qps": 2400.26,
+            "recall10": 0.9191,
+            "latency_ms": 106.655,
+            "efSearch": 1200,
+            "build_s": 150.496
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 60163.36,
+            "recall10": 0.968,
+            "latency_ms": 4.255,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 51219.35,
+            "recall10": 0.968,
+            "latency_ms": 4.998,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 433.56,
+            "recall10": 0.9516,
+            "latency_ms": 590.456,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1161.33,
+            "recall10": 0.8406,
+            "latency_ms": 220.436,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_ACORN": {
+            "qps": 433.56,
+            "recall10": 0.9516,
+            "latency_ms": 590.456,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 26359.45,
+            "recall10": 0.9535,
+            "latency_ms": 9.712,
+            "knob": 48
+          },
+          "PRISM_A100": {
+            "qps": 20029.34,
+            "recall10": 0.9535,
+            "latency_ms": 12.781,
+            "knob": 48
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 356.06,
+            "recall10": 0.7953,
+            "latency_ms": 718.974,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1442.34,
+            "recall10": 0.5828,
+            "latency_ms": 177.49,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_ACORN": {
+            "qps": 356.06,
+            "recall10": 0.7953,
+            "latency_ms": 718.974,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 34869.62,
+            "recall10": 0.9605,
+            "latency_ms": 7.342,
+            "knob": 48
+          },
+          "PRISM_A100": {
+            "qps": 31088.42,
+            "recall10": 0.9605,
+            "latency_ms": 8.235,
+            "knob": 48
+          },
+          "Official_DiskANN": {
+            "qps": 112056.71,
+            "recall10": 0.9645,
+            "latency_ms": 2.285,
+            "L_search": 16,
+            "build_s": 41.944,
+            "variant": "StitchedVamana(R=32,L=100,SR=64)"
+          },
+          "Official_ACORN_1": {
+            "qps": 337.89,
+            "recall10": 0.7965,
+            "latency_ms": 757.651,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1702.98,
+            "recall10": 0.4348,
+            "latency_ms": 150.324,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_ACORN": {
+            "qps": 337.89,
+            "recall10": 0.7965,
+            "latency_ms": 757.651,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 34516.37,
+            "recall10": 0.9691,
+            "latency_ms": 7.417,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 30474.37,
+            "recall10": 0.9691,
+            "latency_ms": 8.401,
+            "knob": 16
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 556.91,
+            "recall10": 0.4008,
+            "latency_ms": 459.678,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_ACORN_gamma": {
+            "qps": 3506.87,
+            "recall10": 0.1258,
+            "latency_ms": 73.0,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 73.239
+          },
+          "Official_ACORN": {
+            "qps": 556.91,
+            "recall10": 0.4008,
+            "latency_ms": 459.678,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 7.328
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        }
+      }
+    },
+    "gist1m": {
+      "N": 1000000,
+      "D": 960,
+      "build": {
+        "PRISM": {
+          "build_s": 13.669,
+          "vram_gib": 0.6029,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 13.528,
+          "vram_gib": 0.6029,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        },
+        "Official_DiskANN": {
+          "build_s": 150.89,
+          "repo": "microsoft/DiskANN C++ 48T (StitchedVamana(R=32,L=100,SR=64))"
+        },
+        "Official_ACORN_1": {
+          "build_s": 23.812,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN_gamma": {
+          "build_s": 407.871,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN": {
+          "build_s": 407.871,
+          "build_s_acorn1": 23.812,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_SeRF_W1_range": {
+          "build_s": 778.02,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        },
+        "Official_SeRF_W2_correlated": {
+          "build_s": 788.488,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 8821.72,
+            "recall10": 0.9563,
+            "latency_ms": 29.019,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 8281.1,
+            "recall10": 0.9563,
+            "latency_ms": 30.914,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 202.49,
+            "recall10": 0.9242,
+            "latency_ms": 1264.267,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_ACORN_gamma": {
+            "qps": 611.01,
+            "recall10": 0.9496,
+            "latency_ms": 418.981,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_ACORN": {
+            "qps": 611.01,
+            "recall10": 0.9496,
+            "latency_ms": 418.981,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_SeRF": {
+            "qps": 2857.75,
+            "recall10": 0.9797,
+            "latency_ms": 89.581,
+            "efSearch": 256,
+            "build_s": 778.02
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 7067.32,
+            "recall10": 0.9762,
+            "latency_ms": 36.223,
+            "knob": 112
+          },
+          "PRISM_A100": {
+            "qps": 5975.13,
+            "recall10": 0.9762,
+            "latency_ms": 42.844,
+            "knob": 112
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 229.53,
+            "recall10": 0.8762,
+            "latency_ms": 1115.34,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_ACORN_gamma": {
+            "qps": 761.9,
+            "recall10": 0.8184,
+            "latency_ms": 336.001,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_ACORN": {
+            "qps": 229.53,
+            "recall10": 0.8762,
+            "latency_ms": 1115.34,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_SeRF": {
+            "qps": 1596.63,
+            "recall10": 0.9332,
+            "latency_ms": 160.338,
+            "efSearch": 1200,
+            "build_s": 788.488
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 11668.11,
+            "recall10": 0.9637,
+            "latency_ms": 21.94,
+            "knob": 96
+          },
+          "PRISM_A100": {
+            "qps": 10186.97,
+            "recall10": 0.9637,
+            "latency_ms": 25.13,
+            "knob": 96
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 226.82,
+            "recall10": 0.8813,
+            "latency_ms": 1128.652,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_ACORN_gamma": {
+            "qps": 788.25,
+            "recall10": 0.8398,
+            "latency_ms": 324.769,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_ACORN": {
+            "qps": 226.82,
+            "recall10": 0.8813,
+            "latency_ms": 1128.652,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 4029.39,
+            "recall10": 0.9656,
+            "latency_ms": 63.533,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 2771.21,
+            "recall10": 0.9656,
+            "latency_ms": 92.378,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 256.09,
+            "recall10": 0.7812,
+            "latency_ms": 999.657,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_ACORN_gamma": {
+            "qps": 714.57,
+            "recall10": 0.6645,
+            "latency_ms": 358.257,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_ACORN": {
+            "qps": 256.09,
+            "recall10": 0.7812,
+            "latency_ms": 999.657,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 7878.02,
+            "recall10": 0.9723,
+            "latency_ms": 32.495,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 6317.36,
+            "recall10": 0.9723,
+            "latency_ms": 40.523,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "qps": 12910.41,
+            "recall10": 0.9652,
+            "latency_ms": 19.829,
+            "L_search": 32,
+            "build_s": 150.89,
+            "variant": "StitchedVamana(R=32,L=100,SR=64)"
+          },
+          "Official_ACORN_1": {
+            "qps": 288.91,
+            "recall10": 0.7746,
+            "latency_ms": 886.102,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1056.33,
+            "recall10": 0.5426,
+            "latency_ms": 242.349,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_ACORN": {
+            "qps": 288.91,
+            "recall10": 0.7746,
+            "latency_ms": 886.102,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 13235.88,
+            "recall10": 0.9605,
+            "latency_ms": 19.341,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 12242.4,
+            "recall10": 0.9605,
+            "latency_ms": 20.911,
+            "knob": 16
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 862.94,
+            "recall10": 0.2546,
+            "latency_ms": 296.659,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_ACORN_gamma": {
+            "qps": 3310.62,
+            "recall10": 0.1655,
+            "latency_ms": 77.327,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 407.871
+          },
+          "Official_ACORN": {
+            "qps": 862.94,
+            "recall10": 0.2546,
+            "latency_ms": 296.659,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.812
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        }
+      }
+    },
+    "convlog1m": {
+      "N": 1000000,
+      "D": 1024,
+      "build": {
+        "PRISM": {
+          "build_s": 15.027,
+          "vram_gib": 0.6412,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 14.829,
+          "vram_gib": 0.6412,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        },
+        "Official_DiskANN": {
+          "build_s": 232.606,
+          "repo": "microsoft/DiskANN C++ 48T (StitchedVamana(R=32,L=100,SR=64))"
+        },
+        "Official_ACORN_1": {
+          "build_s": 23.443,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN_gamma": {
+          "build_s": 288.426,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN": {
+          "build_s": 288.426,
+          "build_s_acorn1": 23.443,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_SeRF_W1_range": {
+          "build_s": 996.172,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        },
+        "Official_SeRF_W2_correlated": {
+          "build_s": 1031.461,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 4575.57,
+            "recall10": 0.9578,
+            "latency_ms": 55.949,
+            "knob": 320
+          },
+          "PRISM_A100": {
+            "qps": 4041.98,
+            "recall10": 0.9578,
+            "latency_ms": 63.335,
+            "knob": 320
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 164.7,
+            "recall10": 0.918,
+            "latency_ms": 1554.32,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_ACORN_gamma": {
+            "qps": 635.12,
+            "recall10": 0.9512,
+            "latency_ms": 403.073,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_ACORN": {
+            "qps": 635.12,
+            "recall10": 0.9512,
+            "latency_ms": 403.073,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_SeRF": {
+            "qps": 1414.47,
+            "recall10": 0.9551,
+            "latency_ms": 180.987,
+            "efSearch": 512,
+            "build_s": 996.172
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 3621.16,
+            "recall10": 0.9688,
+            "latency_ms": 70.696,
+            "knob": 160
+          },
+          "PRISM_A100": {
+            "qps": 2441.54,
+            "recall10": 0.9688,
+            "latency_ms": 104.852,
+            "knob": 160
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 189.35,
+            "recall10": 0.7699,
+            "latency_ms": 1351.992,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_ACORN_gamma": {
+            "qps": 499.67,
+            "recall10": 0.9605,
+            "latency_ms": 512.335,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_ACORN": {
+            "qps": 499.67,
+            "recall10": 0.9605,
+            "latency_ms": 512.335,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_SeRF": {
+            "qps": 1088.94,
+            "recall10": 0.9797,
+            "latency_ms": 235.091,
+            "efSearch": 512,
+            "build_s": 1031.461
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 4982.27,
+            "recall10": 0.966,
+            "latency_ms": 51.382,
+            "knob": 256
+          },
+          "PRISM_A100": {
+            "qps": 4363.83,
+            "recall10": 0.966,
+            "latency_ms": 58.664,
+            "knob": 256
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 179.31,
+            "recall10": 0.9309,
+            "latency_ms": 1427.658,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_ACORN_gamma": {
+            "qps": 736.3,
+            "recall10": 0.9219,
+            "latency_ms": 347.686,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_ACORN": {
+            "qps": 179.31,
+            "recall10": 0.9309,
+            "latency_ms": 1427.658,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 2553.66,
+            "recall10": 0.9668,
+            "latency_ms": 100.248,
+            "knob": 192
+          },
+          "PRISM_A100": {
+            "qps": 1671.32,
+            "recall10": 0.9668,
+            "latency_ms": 153.172,
+            "knob": 192
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 197.74,
+            "recall10": 0.8359,
+            "latency_ms": 1294.65,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_ACORN_gamma": {
+            "qps": 568.05,
+            "recall10": 0.8512,
+            "latency_ms": 450.661,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_ACORN": {
+            "qps": 568.05,
+            "recall10": 0.8512,
+            "latency_ms": 450.661,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 4631.43,
+            "recall10": 0.9621,
+            "latency_ms": 55.275,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 4315.27,
+            "recall10": 0.9621,
+            "latency_ms": 59.324,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "qps": 15443.61,
+            "recall10": 0.9555,
+            "latency_ms": 16.576,
+            "L_search": 48,
+            "build_s": 232.606,
+            "variant": "StitchedVamana(R=32,L=100,SR=64)"
+          },
+          "Official_ACORN_1": {
+            "qps": 216.28,
+            "recall10": 0.8727,
+            "latency_ms": 1183.66,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_ACORN_gamma": {
+            "qps": 1134.44,
+            "recall10": 0.5258,
+            "latency_ms": 225.662,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_ACORN": {
+            "qps": 216.28,
+            "recall10": 0.8727,
+            "latency_ms": 1183.66,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 18152.84,
+            "recall10": 0.9926,
+            "latency_ms": 14.102,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 16805.72,
+            "recall10": 0.9926,
+            "latency_ms": 15.233,
+            "knob": 16
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 744.91,
+            "recall10": 0.1326,
+            "latency_ms": 343.665,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_ACORN_gamma": {
+            "qps": 2714.78,
+            "recall10": 0.0818,
+            "latency_ms": 94.299,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_gamma",
+            "build_s": 288.426
+          },
+          "Official_ACORN": {
+            "qps": 744.91,
+            "recall10": 0.1326,
+            "latency_ms": 343.665,
+            "efSearch": 1536,
+            "variant": "Official_ACORN_1",
+            "build_s": 23.443
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        }
+      }
+    },
+    "deep10m": {
+      "N": 10000000,
+      "D": 96,
+      "build": {
+        "PRISM": {
+          "build_s": 11.438,
+          "vram_gib": 0.7636,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 11.417,
+          "vram_gib": 0.7636,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        },
+        "Official_DiskANN": {
+          "build_s": 328.024,
+          "repo": "microsoft/DiskANN C++ 48T (StitchedVamana(R=32,L=100,SR=64))"
+        },
+        "Official_ACORN_1": {
+          "build_s": 78.931,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN": {
+          "build_s": 78.931,
+          "build_s_acorn1": 78.931,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_SeRF_W1_range": {
+          "build_s": 1942.72,
+          "repo": "rutgers-db/SeRF (IndexSegmentGraph2D)"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 35604.09,
+            "recall10": 0.975,
+            "latency_ms": 7.19,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 30991.11,
+            "recall10": 0.975,
+            "latency_ms": 8.26,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 268.35,
+            "recall10": 0.6832,
+            "latency_ms": 953.995,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_ACORN": {
+            "qps": 268.35,
+            "recall10": 0.6832,
+            "latency_ms": 953.995,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_SeRF": {
+            "qps": 4151.98,
+            "recall10": 0.9855,
+            "latency_ms": 61.657,
+            "efSearch": 256,
+            "build_s": 1942.72
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 31607.56,
+            "recall10": 0.9602,
+            "latency_ms": 8.099,
+            "knob": 112
+          },
+          "PRISM_A100": {
+            "qps": 22784.87,
+            "recall10": 0.9602,
+            "latency_ms": 11.236,
+            "knob": 112
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 241.67,
+            "recall10": 0.6758,
+            "latency_ms": 1059.293,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_ACORN": {
+            "qps": 241.67,
+            "recall10": 0.6758,
+            "latency_ms": 1059.293,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 41161.19,
+            "recall10": 0.9609,
+            "latency_ms": 6.219,
+            "knob": 96
+          },
+          "PRISM_A100": {
+            "qps": 29814.58,
+            "recall10": 0.9609,
+            "latency_ms": 8.586,
+            "knob": 96
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 247.6,
+            "recall10": 0.7047,
+            "latency_ms": 1033.932,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_ACORN": {
+            "qps": 247.6,
+            "recall10": 0.7047,
+            "latency_ms": 1033.932,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 10765.92,
+            "recall10": 0.9785,
+            "latency_ms": 23.779,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 5693.85,
+            "recall10": 0.9785,
+            "latency_ms": 44.961,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 269.88,
+            "recall10": 0.5547,
+            "latency_ms": 948.574,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_ACORN": {
+            "qps": 269.88,
+            "recall10": 0.5547,
+            "latency_ms": 948.574,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 17437.35,
+            "recall10": 0.9563,
+            "latency_ms": 14.681,
+            "knob": 48
+          },
+          "PRISM_A100": {
+            "qps": 9973.13,
+            "recall10": 0.9563,
+            "latency_ms": 25.669,
+            "knob": 48
+          },
+          "Official_DiskANN": {
+            "qps": 20291.42,
+            "recall10": 0.9641,
+            "latency_ms": 12.616,
+            "L_search": 32,
+            "build_s": 328.024,
+            "variant": "StitchedVamana(R=32,L=100,SR=64)"
+          },
+          "Official_ACORN_1": {
+            "qps": 292.01,
+            "recall10": 0.5176,
+            "latency_ms": 876.671,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_ACORN": {
+            "qps": 292.01,
+            "recall10": 0.5176,
+            "latency_ms": 876.671,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 11135.88,
+            "recall10": 0.9742,
+            "latency_ms": 22.989,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 6312.37,
+            "recall10": 0.9742,
+            "latency_ms": 40.555,
+            "knob": 16
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 355.23,
+            "recall10": 0.2711,
+            "latency_ms": 720.658,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_ACORN": {
+            "qps": 355.23,
+            "recall10": 0.2711,
+            "latency_ms": 720.658,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 78.931
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        }
+      }
+    },
+    "sift10m": {
+      "N": 10000000,
+      "D": 128,
+      "build": {
+        "PRISM": {
+          "build_s": 18.547,
+          "vram_gib": 0.99,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 18.438,
+          "vram_gib": 0.99,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        },
+        "Official_DiskANN": {
+          "build_s": 378.866,
+          "repo": "microsoft/DiskANN C++ 48T (StitchedVamana(R=32,L=100,SR=64))"
+        },
+        "Official_ACORN_1": {
+          "build_s": 87.734,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        },
+        "Official_ACORN": {
+          "build_s": 87.734,
+          "build_s_acorn1": 87.734,
+          "repo": "guestrin-lab/ACORN (faiss::IndexACORNFlat)"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 30559.24,
+            "recall10": 0.973,
+            "latency_ms": 8.377,
+            "knob": 80
+          },
+          "PRISM_A100": {
+            "qps": 26146.13,
+            "recall10": 0.973,
+            "latency_ms": 9.791,
+            "knob": 80
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 269.29,
+            "recall10": 0.6445,
+            "latency_ms": 950.642,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_ACORN": {
+            "qps": 269.29,
+            "recall10": 0.6445,
+            "latency_ms": 950.642,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 24665.22,
+            "recall10": 0.9625,
+            "latency_ms": 10.379,
+            "knob": 160
+          },
+          "PRISM_A100": {
+            "qps": 17222.63,
+            "recall10": 0.9625,
+            "latency_ms": 14.864,
+            "knob": 160
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 251.18,
+            "recall10": 0.6207,
+            "latency_ms": 1019.172,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_ACORN": {
+            "qps": 251.18,
+            "recall10": 0.6207,
+            "latency_ms": 1019.172,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 28276.19,
+            "recall10": 0.9801,
+            "latency_ms": 9.054,
+            "knob": 160
+          },
+          "PRISM_A100": {
+            "qps": 18903.6,
+            "recall10": 0.9801,
+            "latency_ms": 13.542,
+            "knob": 160
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 250.25,
+            "recall10": 0.6699,
+            "latency_ms": 1022.992,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_ACORN": {
+            "qps": 250.25,
+            "recall10": 0.6699,
+            "latency_ms": 1022.992,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 9217.76,
+            "recall10": 0.9746,
+            "latency_ms": 27.772,
+            "knob": 96
+          },
+          "PRISM_A100": {
+            "qps": 5965.36,
+            "recall10": 0.9746,
+            "latency_ms": 42.914,
+            "knob": 96
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 281.63,
+            "recall10": 0.4984,
+            "latency_ms": 908.992,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_ACORN": {
+            "qps": 281.63,
+            "recall10": 0.4984,
+            "latency_ms": 908.992,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 14741.67,
+            "recall10": 0.9594,
+            "latency_ms": 17.366,
+            "knob": 64
+          },
+          "PRISM_A100": {
+            "qps": 9120.11,
+            "recall10": 0.9594,
+            "latency_ms": 28.07,
+            "knob": 64
+          },
+          "Official_DiskANN": {
+            "qps": 6675.92,
+            "recall10": 0.8762,
+            "latency_ms": 38.347,
+            "L_search": 512,
+            "build_s": 378.866,
+            "variant": "StitchedVamana(R=32,L=100,SR=64)"
+          },
+          "Official_ACORN_1": {
+            "qps": 266.21,
+            "recall10": 0.5074,
+            "latency_ms": 961.65,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_ACORN": {
+            "qps": 266.21,
+            "recall10": 0.5074,
+            "latency_ms": 961.65,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 9676.61,
+            "recall10": 0.9852,
+            "latency_ms": 26.456,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 5582.9,
+            "recall10": 0.9852,
+            "latency_ms": 45.854,
+            "knob": 16
+          },
+          "Official_DiskANN": {
+            "status": "N/A (single discrete label API)"
+          },
+          "Official_ACORN_1": {
+            "qps": 440.16,
+            "recall10": 0.2316,
+            "latency_ms": 581.606,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_ACORN": {
+            "qps": 440.16,
+            "recall10": 0.2316,
+            "latency_ms": 581.606,
+            "efSearch": 1024,
+            "variant": "Official_ACORN_1",
+            "build_s": 87.734
+          },
+          "Official_SeRF": {
+            "status": "N/A (1D range-dedicated index)"
+          }
+        }
+      }
+    },
+    "t2i10m": {
+      "N": 10000000,
+      "D": 200,
+      "build": {
+        "PRISM": {
+          "build_s": 19.868,
+          "vram_gib": 1.5563,
+          "gpu": "NVIDIA GeForce RTX 4080"
+        },
+        "PRISM_A100": {
+          "build_s": 19.732,
+          "vram_gib": 1.5563,
+          "gpu": "NVIDIA A100 80GB PCIe"
+        }
+      },
+      "workloads": {
+        "W1_range": {
+          "PRISM": {
+            "qps": 10079.45,
+            "recall10": 0.9734,
+            "latency_ms": 25.398,
+            "knob": 320
+          },
+          "PRISM_A100": {
+            "qps": 8890.81,
+            "recall10": 0.9734,
+            "latency_ms": 28.794,
+            "knob": 320
+          }
+        },
+        "W2_correlated": {
+          "PRISM": {
+            "qps": 12729.66,
+            "recall10": 0.968,
+            "latency_ms": 20.111,
+            "knob": 384
+          },
+          "PRISM_A100": {
+            "qps": 9906.09,
+            "recall10": 0.968,
+            "latency_ms": 25.843,
+            "knob": 384
+          }
+        },
+        "W3_compound": {
+          "PRISM": {
+            "qps": 13432.91,
+            "recall10": 0.9676,
+            "latency_ms": 19.058,
+            "knob": 320
+          },
+          "PRISM_A100": {
+            "qps": 11139.36,
+            "recall10": 0.9676,
+            "latency_ms": 22.982,
+            "knob": 320
+          }
+        },
+        "W4_mixed": {
+          "PRISM": {
+            "qps": 5608.35,
+            "recall10": 0.9672,
+            "latency_ms": 45.646,
+            "knob": 192
+          },
+          "PRISM_A100": {
+            "qps": 3306.11,
+            "recall10": 0.9672,
+            "latency_ms": 77.432,
+            "knob": 192
+          }
+        },
+        "WL1_single_label": {
+          "PRISM": {
+            "qps": 8432.98,
+            "recall10": 0.9559,
+            "latency_ms": 30.357,
+            "knob": 192
+          },
+          "PRISM_A100": {
+            "qps": 5005.36,
+            "recall10": 0.9559,
+            "latency_ms": 51.145,
+            "knob": 192
+          }
+        },
+        "WL2_two_label_and": {
+          "PRISM": {
+            "qps": 8776.28,
+            "recall10": 0.9691,
+            "latency_ms": 29.17,
+            "knob": 16
+          },
+          "PRISM_A100": {
+            "qps": 5383.86,
+            "recall10": 0.9691,
+            "latency_ms": 47.55,
+            "knob": 16
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "gpu": "1",
+  "repo": "Supercomputing-System-AI-Lab/VecFlow (vecflow-cu12 0.2.0)",
+  "n_val": 256,
+  "n_test": 256,
+  "datasets": {
+    "modbench": {
+      "N": 134556,
+      "D": 384,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 3.723,
+      "vram_gib": 0.916,
+      "cuda_ctx_mib": 601.0,
+      "total_device_mib": 1539.0,
+      "WL1_single_label": {
+        "qps": 190464.18,
+        "recall10": 0.9715,
+        "latency_ms": 1.344,
+        "itopk_size": 48
+      },
+      "WL2_two_label_and": {
+        "qps": 27915.25,
+        "recall10": 0.7264,
+        "latency_ms": 9.171,
+        "itopk_size": 512
+      }
+    },
+    "sift1m": {
+      "N": 1000000,
+      "D": 128,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 24.499,
+      "vram_gib": 1.961,
+      "cuda_ctx_mib": 601.0,
+      "total_device_mib": 2609.0,
+      "WL1_single_label": {
+        "qps": 405646.73,
+        "recall10": 0.9805,
+        "latency_ms": 0.631,
+        "itopk_size": 16
+      },
+      "WL2_two_label_and": {
+        "qps": 31262.92,
+        "recall10": 0.6957,
+        "latency_ms": 8.189,
+        "itopk_size": 512
+      }
+    },
+    "gist1m": {
+      "N": 1000000,
+      "D": 960,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 52.577,
+      "vram_gib": 18.264,
+      "cuda_ctx_mib": 595.0,
+      "total_device_mib": 19297.0,
+      "WL1_single_label": {
+        "qps": 86942.24,
+        "recall10": 0.9613,
+        "latency_ms": 2.944,
+        "itopk_size": 32
+      },
+      "WL2_two_label_and": {
+        "qps": 18354.85,
+        "recall10": 0.7046,
+        "latency_ms": 13.947,
+        "itopk_size": 512
+      }
+    },
+    "convlog1m": {
+      "N": 1000000,
+      "D": 1024,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 59.58,
+      "vram_gib": 19.133,
+      "cuda_ctx_mib": 601.0,
+      "total_device_mib": 20193.0,
+      "WL1_single_label": {
+        "qps": 95145.23,
+        "recall10": 0.9523,
+        "latency_ms": 2.691,
+        "itopk_size": 48
+      },
+      "WL2_two_label_and": {
+        "status": "CUDA_ERROR: CUDA error encountered at: file=/__w/VecFlow/VecFlow/conda-bld/bld/rattler-build_libcuvs-vecflow-cu12_1780168616/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place/include/raft/core/interruptible.hpp line=293: call='query_result', Reason=cudaErrorIllegalAddress:an illegal memory access was encountered"
+      }
+    },
+    "deep10m": {
+      "N": 10000000,
+      "D": 96,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 210.481,
+      "vram_gib": 18.254,
+      "cuda_ctx_mib": 601.0,
+      "total_device_mib": 19293.0,
+      "WL1_single_label": {
+        "qps": 378632.22,
+        "recall10": 0.9637,
+        "latency_ms": 0.676,
+        "itopk_size": 24
+      },
+      "WL2_two_label_and": {
+        "qps": 31923.27,
+        "recall10": 0.5852,
+        "latency_ms": 8.019,
+        "itopk_size": 512
+      }
+    },
+    "sift10m": {
+      "N": 10000000,
+      "D": 128,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 206.94,
+      "vram_gib": 23.004,
+      "cuda_ctx_mib": 595.0,
+      "total_device_mib": 24151.0,
+      "WL1_single_label": {
+        "qps": 352094.84,
+        "recall10": 0.9641,
+        "latency_ms": 0.727,
+        "itopk_size": 24
+      },
+      "WL2_two_label_and": {
+        "qps": 31851.16,
+        "recall10": 0.6406,
+        "latency_ms": 8.037,
+        "itopk_size": 512
+      }
+    },
+    "t2i10m": {
+      "N": 10000000,
+      "D": 200,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 238.868,
+      "vram_gib": 33.727,
+      "cuda_ctx_mib": 601.0,
+      "total_device_mib": 35137.0,
+      "WL1_single_label": {
+        "qps": 117954.32,
+        "recall10": 0.9652,
+        "latency_ms": 2.17,
+        "itopk_size": 96
+      },
+      "WL2_two_label_and": {
+        "qps": 26141.9,
+        "recall10": 0.5562,
+        "latency_ms": 9.793,
+        "itopk_size": 512
+      }
+    },
+    "teleops1m": {
+      "N": 1000000,
+      "D": 384,
+      "n_val": 256,
+      "n_test": 256,
+      "status": "OK",
+      "build_s": 35.7,
+      "vram_gib": 9.582,
+      "cuda_ctx_mib": 601.0,
+      "total_device_mib": 10413.0,
+      "WL1_single_label": {
+        "qps": 22278.48,
+        "recall10": 0.9398,
+        "latency_ms": 11.491,
+        "itopk_size": 512
+      },
+      "WL2_two_label_and": {
+        "qps": 22718.3,
+        "recall10": 0.7336,
+        "latency_ms": 11.268,
+        "itopk_size": 512
+      }
+    }
+  }
+}

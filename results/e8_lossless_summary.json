@@ -1,0 +1,82 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4080",
+  "grand_evaluations_audited": 96,
+  "grand_topk_slots_checked": 102296,
+  "grand_mismatched_slots": 0,
+  "grand_predicate_violations": 0,
+  "overall_agreement_pct": 100.0,
+  "datasets": [
+    {
+      "dataset": "convlog1m",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12800,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 2.2758291243770203e-07
+    },
+    {
+      "dataset": "bge1024",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12800,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 2.3782032911955346e-07
+    },
+    {
+      "dataset": "gist1m",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12796,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 2.3351838887256855e-07
+    },
+    {
+      "dataset": "msong",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12796,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 3.3324383884905575e-07
+    },
+    {
+      "dataset": "sift1m",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12716,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 0.0
+    },
+    {
+      "dataset": "deep10m",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12800,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 1.1920928955078125e-07
+    },
+    {
+      "dataset": "sift10m",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12794,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 0.0
+    },
+    {
+      "dataset": "t2i10m",
+      "evaluations_audited": 12,
+      "total_topk_slots": 12794,
+      "mismatched_slots": 0,
+      "predicate_violations": 0,
+      "agreement_pct": 100.0,
+      "max_rel_dist_diff": 2.1714277028574904e-07
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "grand_audits": 35,
+  "grand_mismatches": 0,
+  "grand_tombstone_leaks": 0,
+  "datasets": {
+    "convlog1m": {
+      "N_initial": 800000,
+      "N_deleted": 50000,
+      "N_inserted_in_dist": 200000,
+      "N_inserted_ood": 50000,
+      "initial_build_s": 26.811,
+      "cagra_single_rebuild_s": 15.076,
+      "total_incremental_update_s": 2.3424,
+      "checkpoints": [
+        {
+          "stage": "0_Init_80pct",
+          "live_rows": 800000,
+          "update_ms": 26810.749,
+          "update_rows_per_s": 29838.8,
+          "search_qps": 5757.3,
+          "recall_at_10": 0.9711,
+          "sketch_prune_pct": 97.1,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "1_Del_5pct",
+          "live_rows": 750000,
+          "update_ms": 0.195,
+          "update_rows_per_s": 256610279.5,
+          "search_qps": 5713.44,
+          "recall_at_10": 0.9699,
+          "sketch_prune_pct": 96.95,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "2_Ins_+5pct",
+          "live_rows": 800000,
+          "update_ms": 460.056,
+          "update_rows_per_s": 108682.3,
+          "search_qps": 5564.83,
+          "recall_at_10": 0.9699,
+          "sketch_prune_pct": 97.09,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "3_Ins_+10pct",
+          "live_rows": 850000,
+          "update_ms": 463.216,
+          "update_rows_per_s": 107941.0,
+          "search_qps": 5524.38,
+          "recall_at_10": 0.9707,
+          "sketch_prune_pct": 97.19,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "4_Ins_+15pct",
+          "live_rows": 900000,
+          "update_ms": 461.838,
+          "update_rows_per_s": 108263.2,
+          "search_qps": 5450.38,
+          "recall_at_10": 0.9715,
+          "sketch_prune_pct": 97.32,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "5_Ins_+20pct",
+          "live_rows": 950000,
+          "update_ms": 458.913,
+          "update_rows_per_s": 108953.2,
+          "search_qps": 5271.67,
+          "recall_at_10": 0.9727,
+          "sketch_prune_pct": 97.43,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "6_Ins_OOD_Drift",
+          "live_rows": 1000000,
+          "update_ms": 498.196,
+          "update_rows_per_s": 100362.2,
+          "search_qps": 5186.08,
+          "recall_at_10": 0.9727,
+          "sketch_prune_pct": 97.45,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        }
+      ]
+    },
+    "gist1m": {
+      "N_initial": 800000,
+      "N_deleted": 50000,
+      "N_inserted_in_dist": 200000,
+      "N_inserted_ood": 50000,
+      "initial_build_s": 16.894,
+      "cagra_single_rebuild_s": 14.615,
+      "total_incremental_update_s": 1.8752,
+      "checkpoints": [
+        {
+          "stage": "0_Init_80pct",
+          "live_rows": 800000,
+          "update_ms": 16893.585,
+          "update_rows_per_s": 47355.3,
+          "search_qps": 8795.9,
+          "recall_at_10": 0.9902,
+          "sketch_prune_pct": 95.97,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "1_Del_5pct",
+          "live_rows": 750000,
+          "update_ms": 0.084,
+          "update_rows_per_s": 592979118.0,
+          "search_qps": 8724.67,
+          "recall_at_10": 0.9898,
+          "sketch_prune_pct": 95.7,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "2_Ins_+5pct",
+          "live_rows": 800000,
+          "update_ms": 381.163,
+          "update_rows_per_s": 131177.4,
+          "search_qps": 8867.2,
+          "recall_at_10": 0.9898,
+          "sketch_prune_pct": 95.91,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "3_Ins_+10pct",
+          "live_rows": 850000,
+          "update_ms": 372.734,
+          "update_rows_per_s": 134144.0,
+          "search_qps": 8498.94,
+          "recall_at_10": 0.9906,
+          "sketch_prune_pct": 96.0,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "4_Ins_+15pct",
+          "live_rows": 900000,
+          "update_ms": 372.726,
+          "update_rows_per_s": 134147.0,
+          "search_qps": 8334.31,
+          "recall_at_10": 0.991,
+          "sketch_prune_pct": 96.15,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "5_Ins_+20pct",
+          "live_rows": 950000,
+          "update_ms": 371.326,
+          "update_rows_per_s": 134652.7,
+          "search_qps": 8076.55,
+          "recall_at_10": 0.9902,
+          "sketch_prune_pct": 96.25,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "6_Ins_OOD_Drift",
+          "live_rows": 1000000,
+          "update_ms": 377.209,
+          "update_rows_per_s": 132552.5,
+          "search_qps": 7812.62,
+          "recall_at_10": 0.9902,
+          "sketch_prune_pct": 95.86,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        }
+      ]
+    },
+    "sift10m": {
+      "N_initial": 8000000,
+      "N_deleted": 500000,
+      "N_inserted_in_dist": 2000000,
+      "N_inserted_ood": 500000,
+      "initial_build_s": 20.871,
+      "cagra_single_rebuild_s": 75.591,
+      "total_incremental_update_s": 3.7467,
+      "checkpoints": [
+        {
+          "stage": "0_Init_80pct",
+          "live_rows": 8000000,
+          "update_ms": 20871.479,
+          "update_rows_per_s": 383298.2,
+          "search_qps": 24606.33,
+          "recall_at_10": 0.9625,
+          "sketch_prune_pct": 97.33,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "1_Del_5pct",
+          "live_rows": 7500000,
+          "update_ms": 0.202,
+          "update_rows_per_s": 2471919025.5,
+          "search_qps": 24480.32,
+          "recall_at_10": 0.9594,
+          "sketch_prune_pct": 97.24,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "2_Ins_+5pct",
+          "live_rows": 8000000,
+          "update_ms": 839.282,
+          "update_rows_per_s": 595747.3,
+          "search_qps": 24025.57,
+          "recall_at_10": 0.9656,
+          "sketch_prune_pct": 97.32,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "3_Ins_+10pct",
+          "live_rows": 8500000,
+          "update_ms": 826.374,
+          "update_rows_per_s": 605052.7,
+          "search_qps": 23830.08,
+          "recall_at_10": 0.9609,
+          "sketch_prune_pct": 97.43,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "4_Ins_+15pct",
+          "live_rows": 9000000,
+          "update_ms": 691.95,
+          "update_rows_per_s": 722595.4,
+          "search_qps": 23950.08,
+          "recall_at_10": 0.9609,
+          "sketch_prune_pct": 97.58,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "5_Ins_+20pct",
+          "live_rows": 9500000,
+          "update_ms": 693.507,
+          "update_rows_per_s": 720973.5,
+          "search_qps": 23460.95,
+          "recall_at_10": 0.9609,
+          "sketch_prune_pct": 97.62,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "6_Ins_OOD_Drift",
+          "live_rows": 10000000,
+          "update_ms": 695.351,
+          "update_rows_per_s": 719061.4,
+          "search_qps": 22194.55,
+          "recall_at_10": 0.9609,
+          "sketch_prune_pct": 96.93,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        }
+      ]
+    },
+    "modbench": {
+      "N_initial": 107644,
+      "N_deleted": 6727,
+      "N_inserted_in_dist": 26912,
+      "N_inserted_ood": 6727,
+      "initial_build_s": 2.571,
+      "cagra_single_rebuild_s": 1.383,
+      "total_incremental_update_s": 0.2533,
+      "checkpoints": [
+        {
+          "stage": "0_Init_80pct",
+          "live_rows": 107644,
+          "update_ms": 2570.736,
+          "update_rows_per_s": 41872.8,
+          "search_qps": 44755.48,
+          "recall_at_10": 0.9625,
+          "sketch_prune_pct": 88.7,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "1_Del_5pct",
+          "live_rows": 100917,
+          "update_ms": 0.096,
+          "update_rows_per_s": 69886550.5,
+          "search_qps": 47194.37,
+          "recall_at_10": 0.9602,
+          "sketch_prune_pct": 88.09,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "2_Ins_+5pct",
+          "live_rows": 107645,
+          "update_ms": 56.668,
+          "update_rows_per_s": 118725.8,
+          "search_qps": 45283.46,
+          "recall_at_10": 0.9605,
+          "sketch_prune_pct": 88.62,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "3_Ins_+10pct",
+          "live_rows": 114373,
+          "update_ms": 49.339,
+          "update_rows_per_s": 136361.9,
+          "search_qps": 43484.82,
+          "recall_at_10": 0.9633,
+          "sketch_prune_pct": 89.04,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "4_Ins_+15pct",
+          "live_rows": 121101,
+          "update_ms": 48.91,
+          "update_rows_per_s": 137559.2,
+          "search_qps": 41798.67,
+          "recall_at_10": 0.9664,
+          "sketch_prune_pct": 89.46,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "5_Ins_+20pct",
+          "live_rows": 127829,
+          "update_ms": 48.905,
+          "update_rows_per_s": 137573.0,
+          "search_qps": 41355.95,
+          "recall_at_10": 0.9688,
+          "sketch_prune_pct": 89.9,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        },
+        {
+          "stage": "6_Ins_OOD_Drift",
+          "live_rows": 134556,
+          "update_ms": 49.421,
+          "update_rows_per_s": 136116.6,
+          "search_qps": 36343.08,
+          "recall_at_10": 0.9688,
+          "sketch_prune_pct": 85.57,
+          "lossless_agreement_pct": 100.0,
+          "mismatched_slots": 0,
+          "tombstone_leaks": 0
+        }
+      ]
+    }
+  }
+}

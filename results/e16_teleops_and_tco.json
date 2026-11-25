@@ -1,0 +1,617 @@
+{
+  "gpu_4080": "NVIDIA GeForce RTX 4080",
+  "dataset_meta": {
+    "name": "TeleOps1M",
+    "N": 1000000,
+    "D": 384,
+    "raw_fp32_gib": 1.4305,
+    "sources": [
+      "OpenStack (nova-api, nova-compute, nova-scheduler)",
+      "OpenSSH (network gateway)",
+      "HPC (cluster node resource manager)",
+      "Hadoop (distributed storage metrics)",
+      "ZooKeeper (coordination quorum)",
+      "Apache (HTTP/LDAP ingress)",
+      "Linux (host OS syslog)"
+    ],
+    "unique_categories_col2": 40
+  },
+  "teleops_4080": {
+    "PRISM_build": {
+      "build_s": 8.604,
+      "static_vram_gib": 0.2552,
+      "host_pinned_gib": 1.4612
+    },
+    "workloads": {
+      "W1_range": {
+        "R95": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 11426.74,
+            "p99_ms": 26.436,
+            "recall_at_10": 0.9957,
+            "nprobe": 256,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.2599,
+            "pcie_transfer_mib": 130.64
+          },
+          "Host_Offload": {
+            "status": "OK",
+            "qps": 448.71,
+            "recall_at_10": 0.9945,
+            "nprobe": 256,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 6574.54
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 1069.54,
+            "recall_at_10": 0.9633,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.7939,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 435.76,
+            "recall_at_10": 0.5543,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 2918.18,
+            "recall_at_10": 0.4488,
+            "static_vram_gib": 1.803
+          },
+          "Official_ACORN": {
+            "status": "RECALL_MISS",
+            "qps": 489.2,
+            "recall_at_10": 0.7957,
+            "ef": 1024
+          }
+        },
+        "R99": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 12058.36,
+            "p99_ms": 25.051,
+            "recall_at_10": 0.9957,
+            "nprobe": 256,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.2599,
+            "pcie_transfer_mib": 130.64
+          },
+          "Host_Offload": {
+            "status": "OK",
+            "qps": 448.74,
+            "recall_at_10": 0.9945,
+            "nprobe": 256,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 6574.54
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 858.68,
+            "recall_at_10": 1.0,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.7939,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 429.07,
+            "recall_at_10": 0.5547,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 2918.18,
+            "recall_at_10": 0.4488,
+            "static_vram_gib": 1.803
+          }
+        }
+      },
+      "W2_correlated": {
+        "R95": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 16357.74,
+            "p99_ms": 18.467,
+            "recall_at_10": 0.9727,
+            "nprobe": 128,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.259,
+            "pcie_transfer_mib": 98.21
+          },
+          "Host_Offload": {
+            "status": "OK",
+            "qps": 750.68,
+            "recall_at_10": 0.9727,
+            "nprobe": 128,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 3937.46
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 1071.97,
+            "recall_at_10": 0.9973,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.7939,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 427.05,
+            "recall_at_10": 0.4891,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 3184.34,
+            "recall_at_10": 0.1957,
+            "static_vram_gib": 1.803
+          },
+          "Official_ACORN": {
+            "status": "RECALL_MISS",
+            "qps": 628.57,
+            "recall_at_10": 0.7492,
+            "ef": 1024
+          }
+        },
+        "R99": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 13929.06,
+            "p99_ms": 21.687,
+            "recall_at_10": 0.9992,
+            "nprobe": 256,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.259,
+            "pcie_transfer_mib": 105.85
+          },
+          "Host_Offload": {
+            "status": "OK",
+            "qps": 352.66,
+            "recall_at_10": 0.9992,
+            "nprobe": 256,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 8390.98
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 412.23,
+            "recall_at_10": 0.9992,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.7939,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 423.52,
+            "recall_at_10": 0.4871,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 3184.34,
+            "recall_at_10": 0.1957,
+            "static_vram_gib": 1.803
+          }
+        }
+      },
+      "W3_compound": {
+        "R95": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 12005.99,
+            "p99_ms": 25.161,
+            "recall_at_10": 0.9855,
+            "nprobe": 512,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.2598,
+            "pcie_transfer_mib": 170.58
+          },
+          "Host_Offload": {
+            "status": "OK",
+            "qps": 710.96,
+            "recall_at_10": 0.9781,
+            "nprobe": 512,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 4165.82
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 432.27,
+            "recall_at_10": 0.9711,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.9727,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 400.97,
+            "recall_at_10": 0.2793,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 2936.45,
+            "recall_at_10": 0.1238,
+            "static_vram_gib": 1.803
+          },
+          "Official_ACORN": {
+            "status": "RECALL_MISS",
+            "qps": 591.62,
+            "recall_at_10": 0.6957,
+            "ef": 1024
+          }
+        },
+        "R99": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 11965.39,
+            "p99_ms": 25.246,
+            "recall_at_10": 0.9855,
+            "nprobe": 1024,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.2598,
+            "pcie_transfer_mib": 170.46
+          },
+          "Host_Offload": {
+            "status": "RECALL_MISS",
+            "qps": 710.59,
+            "recall_at_10": 0.9781,
+            "nprobe": 1024,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 4165.82
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 983.67,
+            "recall_at_10": 1.0,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.9727,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 413.54,
+            "recall_at_10": 0.2805,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 2936.45,
+            "recall_at_10": 0.1238,
+            "static_vram_gib": 1.803
+          }
+        }
+      },
+      "W4_mixed": {
+        "R95": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 7493.16,
+            "p99_ms": 40.314,
+            "recall_at_10": 0.9879,
+            "nprobe": 384,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.2596,
+            "pcie_transfer_mib": 175.93
+          },
+          "Host_Offload": {
+            "status": "OK",
+            "qps": 195.14,
+            "recall_at_10": 0.9559,
+            "nprobe": 384,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 15200.58
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 369.18,
+            "recall_at_10": 0.9711,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.9727,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 403.49,
+            "recall_at_10": 0.5781,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 2874.87,
+            "recall_at_10": 0.3188,
+            "static_vram_gib": 1.803
+          },
+          "Official_ACORN": {
+            "status": "RECALL_MISS",
+            "qps": 636.43,
+            "recall_at_10": 0.6551,
+            "ef": 1024
+          }
+        },
+        "R99": {
+          "PRISM": {
+            "status": "OK",
+            "qps": 6906.17,
+            "p99_ms": 43.741,
+            "recall_at_10": 0.993,
+            "nprobe": 1024,
+            "static_vram_gib": 0.2552,
+            "peak_vram_gib": 0.2596,
+            "pcie_transfer_mib": 178.47
+          },
+          "Host_Offload": {
+            "status": "RECALL_MISS",
+            "qps": 146.6,
+            "recall_at_10": 0.984,
+            "nprobe": 1024,
+            "static_vram_gib": 0.0129,
+            "pcie_transfer_mib": 20261.77
+          },
+          "cuVS_IVF_Flat": {
+            "status": "OK",
+            "qps": 519.12,
+            "recall_at_10": 1.0,
+            "static_vram_gib": 1.6451,
+            "peak_vram_gib": 1.9727,
+            "build_s": 2.338
+          },
+          "cuVS_CAGRA": {
+            "status": "RECALL_MISS",
+            "qps": 403.93,
+            "recall_at_10": 0.5766,
+            "static_vram_gib": 2.2173,
+            "peak_vram_gib": 2.2173,
+            "build_s": 11.03
+          },
+          "Faiss_GPU": {
+            "status": "RECALL_MISS",
+            "qps": 2874.87,
+            "recall_at_10": 0.3188,
+            "static_vram_gib": 1.803
+          }
+        }
+      }
+    }
+  },
+  "cpu_and_dbms": {
+    "Official_ACORN_1": {
+      "build_s": 13.508,
+      "workloads": {
+        "W1_range": {
+          "status": "RECALL_MISS",
+          "qps": 489.2,
+          "recall_at_10": 0.7957,
+          "ef": 1024
+        },
+        "W2_correlated": {
+          "status": "RECALL_MISS",
+          "qps": 628.57,
+          "recall_at_10": 0.7492,
+          "ef": 1024
+        },
+        "W3_compound": {
+          "status": "RECALL_MISS",
+          "qps": 591.62,
+          "recall_at_10": 0.6957,
+          "ef": 1024
+        },
+        "W4_mixed": {
+          "status": "RECALL_MISS",
+          "qps": 636.43,
+          "recall_at_10": 0.6551,
+          "ef": 1024
+        }
+      }
+    },
+    "Official_ACORN_gamma_WL1": {
+      "qps": 3021.48,
+      "recall_at_10": 0.3785,
+      "ef": 1024,
+      "build_s": 122.05
+    },
+    "Official_SeRF_WL1": {
+      "qps": 2482.34,
+      "recall_at_10": 0.2742,
+      "ef": 1200,
+      "build_s": 112.41
+    },
+    "DuckDB_1_5_SQL_Exact": {
+      "ingest_s": 7.64,
+      "qps": 13.03,
+      "latency_ms": 76.73,
+      "recall_at_10": 1.0
+    },
+    "DuckDB_1_5_VSS_HNSW": {
+      "build_s": 37.28,
+      "qps": 10.7,
+      "latency_ms": 93.44,
+      "recall_at_10": 1.0
+    }
+  },
+  "colocated_edge_appliance": {
+    "gpu": "NVIDIA GeForce RTX 4080",
+    "total_vram_gib": 15.57,
+    "ops_agent_model": "Qwen2.5-3B-Instruct (FP16, matching 4-bit 7B Ops-Agent VRAM budget)",
+    "llm_resident_vram_gib": 5.863,
+    "llm_peak_with_kv_gib": 5.953,
+    "remaining_vram_budget_gib": 9.617,
+    "datasets": {
+      "teleops1m": {
+        "PRISM_CoLocated": {
+          "status": "OK",
+          "prism_index_vram_gib": 0.2552,
+          "combined_llm_plus_index_peak_gib": 6.873,
+          "batch_qps": 3641.6,
+          "single_alert_retrieval_ms": 12.865,
+          "single_alert_llm_rca_ms": 1303.1
+        },
+        "cuVS_CAGRA_CoLocated": {
+          "status": "OK",
+          "cagra_vram_gib": 5.883,
+          "combined_peak_gib": 11.836,
+          "batch_qps": 363.48
+        }
+      },
+      "convlog1m": {
+        "PRISM_CoLocated": {
+          "status": "OK",
+          "prism_index_vram_gib": 0.6412,
+          "combined_llm_plus_index_peak_gib": 8.509,
+          "batch_qps": 6983.17,
+          "single_alert_retrieval_ms": 2.571,
+          "single_alert_llm_rca_ms": 1328.9
+        },
+        "cuVS_CAGRA_CoLocated": {
+          "status": "OOM",
+          "error": "cuVS cagra requires est. 9.75 GiB > 7.49 GiB"
+        }
+      },
+      "sift10m": {
+        "PRISM_CoLocated": {
+          "status": "OK",
+          "prism_index_vram_gib": 0.99,
+          "combined_llm_plus_index_peak_gib": 7.108,
+          "batch_qps": 28381.68,
+          "single_alert_retrieval_ms": 5.215,
+          "single_alert_llm_rca_ms": 1344.0
+        },
+        "cuVS_CAGRA_CoLocated": {
+          "status": "OOM",
+          "error": "cuVS cagra requires est. 12.35 GiB > 7.47 GiB"
+        }
+      }
+    }
+  },
+  "gpu_a100": "NVIDIA A100 80GB PCIe",
+  "teleops_a100": {
+    "PRISM_A100_W3": {
+      "qps": 9958.29,
+      "recall_at_10": 0.9855,
+      "nprobe": 512,
+      "static_vram_gib": 0.2552,
+      "build_s": 8.544
+    },
+    "cuVS_IVF_Flat_A100": {
+      "qps": 400.65,
+      "recall_at_10": 0.9727,
+      "static_vram_gib": 1.6451,
+      "peak_vram_gib": 1.9725
+    },
+    "cuVS_CAGRA_A100": {
+      "qps": 345.16,
+      "recall_at_10": 0.2832,
+      "static_vram_gib": 2.2173,
+      "peak_vram_gib": 2.2173
+    },
+    "Official_VecFlow_WL1": {
+      "status": "OK",
+      "pure_index_vram_gib": 9.582,
+      "build_s": 35.7,
+      "WL1_qps": 22278.48,
+      "WL1_recall10": 0.9398,
+      "WL2": {
+        "qps": 22718.3,
+        "recall10": 0.7336,
+        "latency_ms": 11.268,
+        "itopk_size": 512
+      }
+    },
+    "Host_Offload_A100_W3": {
+      "qps": 707.45
+    }
+  },
+  "tco_teleops1m_w3": [
+    {
+      "architecture": "Edge 16GB GPU Appliance + PRISM (Ours)",
+      "capex_usd": 3800.0,
+      "tdp_watts": 420.0,
+      "qps": 12005.99,
+      "capex_per_1k_qps_usd": 316.51,
+      "qps_per_watt": 28.59,
+      "status": "OK"
+    },
+    {
+      "architecture": "Edge 16GB GPU Appliance + Host-Offload",
+      "capex_usd": 3800.0,
+      "tdp_watts": 420.0,
+      "qps": 710.96,
+      "capex_per_1k_qps_usd": 5344.89,
+      "qps_per_watt": 1.69,
+      "status": "OK"
+    },
+    {
+      "architecture": "Edge 16GB GPU Appliance + cuVS-IVF-Flat",
+      "capex_usd": 3800.0,
+      "tdp_watts": 420.0,
+      "qps": 432.27,
+      "capex_per_1k_qps_usd": 8790.8,
+      "qps_per_watt": 1.03,
+      "status": "OK"
+    },
+    {
+      "architecture": "80GB A100 Data-Center Node + PRISM-A100 (Ours)",
+      "capex_usd": 18500.0,
+      "tdp_watts": 550.0,
+      "qps": 9958.29,
+      "capex_per_1k_qps_usd": 1857.75,
+      "qps_per_watt": 18.11,
+      "status": "OK"
+    },
+    {
+      "architecture": "80GB A100 Data-Center Node + cuVS-IVF-Flat",
+      "capex_usd": 18500.0,
+      "tdp_watts": 550.0,
+      "qps": 400.65,
+      "capex_per_1k_qps_usd": 46174.97,
+      "qps_per_watt": 0.73,
+      "status": "OK"
+    },
+    {
+      "architecture": "80GB A100 Data-Center Node + cuVS-CAGRA",
+      "capex_usd": 18500.0,
+      "tdp_watts": 550.0,
+      "qps": 345.16,
+      "capex_per_1k_qps_usd": 53598.33,
+      "qps_per_watt": 0.63,
+      "status": "OK"
+    },
+    {
+      "architecture": "48T Dual-Socket CPU Server + Official ACORN",
+      "capex_usd": 6500.0,
+      "tdp_watts": 380.0,
+      "qps": 591.62,
+      "capex_per_1k_qps_usd": 10986.78,
+      "qps_per_watt": 1.56,
+      "status": "OK"
+    },
+    {
+      "architecture": "48T Dual-Socket CPU Server + DuckDB 1.5 vss",
+      "capex_usd": 6500.0,
+      "tdp_watts": 380.0,
+      "qps": 10.7,
+      "capex_per_1k_qps_usd": 607476.64,
+      "qps_per_watt": 0.03,
+      "status": "OK"
+    }
+  ]
+}
